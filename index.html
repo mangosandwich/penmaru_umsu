@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.js"></script>
+    <script src="assets/css/tailwind.config.js"></script>
+    <script src="assets/js/main.js"></script>
+  </head>
+
+  <body class="font-ibm m-0">
+    <div class="bg-white w-full">
+      <!-- Hero Section -->
+      <section class="relative bg-light-blue overflow-hidden">
+        <!-- Navigation -->
+        <header
+          class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm"
+        >
+          <div
+            class="container mx-auto px-4 lg:px-8 py-6 lg:py-8 flex items-center justify-between"
+          >
+            <!-- Logo -->
+            <div class="font-bold text-2xl lg:text-[32px]">
+              <img
+                src="https://admission.umsu.ac.id/images/umsu/logo-admisi.png"
+                class="w-[180px] h-[45px]"
+                alt="UMSU Admission Logo"
+              />
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center space-x-8">
+              <a href="index.html" class="nav-link font-medium text-lg"
+                >Beranda</a
+              >
+              <a
+                href="pages/pendaftaran.html"
+                class="nav-link font-normal text-lg"
+                >Pendaftaran</a
+              >
+              <a
+                href="pages/informasi.html"
+                class="nav-link font-normal text-lg"
+                >Informasi
+              </a>
+              <a
+                href="pages/biaya-kuliah.html"
+                class="nav-link font-normal text-lg"
+                >Biaya Kuliah</a
+              >
+              <a href="pages/brosur.html" class="nav-link font-normal text-lg"
+                >Brosur</a
+              >
+              <a href="pages/kontak.html" class="nav-link font-normal text-lg"
+                >Kontak</a
+              >
+            </div>
+
+            <!-- Auth Buttons -->
+            <div class="hidden lg:flex items-center space-x-4">
+              <button
+                class="px-6 py-2.5 rounded-full bg-gradient-to-r from-primary to-blue-500 text-white font-semibold text-lg shadow-md shadow-blue-400/40 hover:shadow-lg hover:shadow-blue-500/50 hover:scale-105 transition-transform duration-300"
+              >
+                Log in
+              </button>
+              <button
+                class="px-6 py-2.5 rounded-full border-2 border-blue-500 text-blue-500 font-semibold text-lg hover:bg-sky-500/10 hover:shadow-md hover:shadow-sky-300/30 transition-all duration-300"
+              >
+                Daftar
+              </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="lg:hidden text-primary">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            id="mobile-menu"
+            class="flex flex-col space-y-3 bg-white shadow-md px-6 py-4 lg:hidden"
+          >
+            <a
+              href="index.html"
+              class="nav-link block font-medium text-lg hover:text-blue-600"
+              >Beranda</a
+            >
+            <a
+              href="pages/pendaftaran.html"
+              class="nav-link block font-normal text-lg hover:text-blue-600"
+              >Pendaftaran</a
+            >
+            <a
+              href="pages/informasi.html"
+              class="nav-link block font-normal text-lg hover:text-blue-600"
+              >Informasi</a
+            >
+            <a
+              href="pages/biaya-kuliah.html"
+              class="nav-link block font-normal text-lg hover:text-blue-600"
+              >Biaya Kuliah</a
+            >
+            <a
+              href="pages/brosur.html"
+              class="nav-link block font-normal text-lg hover:text-blue-600"
+              >Brosur</a
+            >
+            <a
+              href="pages/kontak.html"
+              class="nav-link block font-normal text-lg hover:text-blue-600"
+              >Kontak</a
+            >
+            <div class="pt-4 border-t border-gray-200 flex flex-col space-y-3">
+              <button
+                class="w-full px-6 py-2.5 rounded-full bg-gradient-to-r from-primary to-blue-500 text-white font-semibold text-lg shadow-md hover:scale-105 transition-transform duration-300"
+              >
+                Log in
+              </button>
+              <button
+                class="w-full px-6 py-2.5 rounded-full border-2 border-blue-500 text-blue-500 font-semibold text-lg hover:bg-sky-500/10 transition-all duration-300"
+              >
+                Sign up
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <!-- Hero Content -->
+        <section class="relative overflow-hidden mt-40">
+          <!-- Bagian Utama (Teks & Gambar) -->
+          <div class="container mx-auto px-4 lg:px-8 mt-4 lg:mt-8 relative z-0">
+            <div class="grid lg:grid-cols-2 gap-8 items-center">
+              <!-- Teks -->
+              <div class="mb-40 z-10">
+                <h1
+                  class="font-bold text-4xl lg:text-[64px] leading-tight mb-6"
+                >
+                  <span class="text-dark">Langkah Awal<br /></span>
+                  <span class="text-primary">Menuju</span>
+                  <span class="text-dark"> Kesuksesan</span>
+                </h1>
+
+                <p
+                  class="font-normal text-text-gray text-base lg:text-lg mb-8 max-w-md"
+                >
+                  "UMSU Adalah Universitas Pertama dan Satu-satunya PTS
+                  Akreditasi Unggul di Medan - Sumatera Utara"
+                </p>
+
+                <div
+                  class="mt-8 flex flex-col lg:flex-row gap-4 justify-center lg:justify-start"
+                >
+                  <!-- Tombol utama -->
+                  <a
+                    href="#daftar"
+                    class="bg-gradient-to-r from-primary to-blue-500 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-blue-400/30 hover:shadow-blue-500/50 hover:scale-105 transition-transform duration-300"
+                  >
+                    Daftar Sekarang
+                  </a>
+                  <!-- Tombol sekunder -->
+                  <a
+                    href="#info"
+                    class="border-2 border-blue-500 text-blue-500 px-8 py-3 rounded-xl font-semibold text-lg hover:bg-sky-500/10 hover:shadow-md hover:shadow-sky-300/30 transition-all duration-300"
+                  >
+                    Info Lengkap
+                  </a>
+                </div>
+              </div>
+
+              <img
+                class="absolute top-[2px] left-[490px] w-[1500px] h-[1000px] z-0"
+                style="opacity: 0.3"
+                src="assets/images/gedung-rektor.png"
+              />
+
+              <!-- Gambar -->
+              <div class="relative hidden lg:block z-10 mt-16">
+                <img
+                  src="https://ultra.umsu.ac.id/assets/images/talent/couple1.png"
+                  alt="Doctor"
+                  class="w-full h-auto rounded-lg mx-auto translate-y-4 scale-110"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Background Biru -->
+          <div
+            class="absolute bottom-0 left-0 w-full bg-gradient-to-b from-transparent to-primary pt-6 z-10"
+          >
+            <div class="container mx-auto px-auto py-4">
+              <div class="flex justify-center lg:justify-start">
+                <svg
+                  viewBox="0 0 600 70"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-full max-w-xl"
+                >
+                  <text
+                    x="50%"
+                    y="50%"
+                    dominant-baseline="middle"
+                    text-anchor="middle"
+                    font-size="36"
+                    font-family="Poppins, sans-serif"
+                    font-weight="700"
+                    fill="#ffffff"
+                  >
+                    Unggul | Cerdas | Terpercaya
+                  </text>
+                </svg>
+              </div>
+
+              <div
+                class="flex flex-wrap items-center justify-center gap-x-6 text-white lg:justify-start"
+              >
+                <a
+                  href="tel:+628116503938"
+                  class="flex items-center gap-2 font-medium transition hover:text-gray-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.758a10.024 10.024 0 006.46 6.46l.758-1.518a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                    />
+                  </svg>
+                  <span>+62 811 650 3938</span>
+                </a>
+                <a
+                  href="tel:+628116503937"
+                  class="flex items-center gap-2 font-medium transition hover:text-gray-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.758a10.024 10.024 0 006.46 6.46l.758-1.518a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                    />
+                  </svg>
+                  <span>+62 811 650 3937</span>
+                </a>
+                <a
+                  href="mailto:penmaru@umsu.ac.id"
+                  class="flex items-center gap-2 font-medium transition hover:text-gray-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z"
+                    />
+                    <path
+                      d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z"
+                    />
+                  </svg>
+                  <span>penmaru@umsu.ac.id</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Program Studi -->
+      <section class="py-16 lg:py-24">
+        <div class="container mx-auto px-4 lg:px-8">
+          <h2
+            class="font-bold text-[#2e2e2e] text-3xl lg:text-[40px] mb-8 text-center lg:text-center"
+          >
+            PROGRAM STUDI
+          </h2>
+          <h2
+            class="font-bold text-primary text-3xl lg:text-[42px] mb-20 text-center lg:text-center"
+          >
+            Universitas Muhammadiyah Sumatera Utara
+          </h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Card -->
+            <div
+              class="group rounded-[20px] p-8 hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-400 hover:text-white hover:shadow-xl ease-in-out cursor-pointer hover:scale-105 transition-transform duration-300"
+            >
+              <div
+                class="w-[92px] h-[92px] bg-[#e6f5fc] rounded-full flex items-center justify-center mb-6 group-hover:bg-white/20 transition-all duration-300"
+              >
+                <div class="w-[50%]">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                      fill="#008bf5"
+                      d="M48 195.8l209.2 86.1c9.8 4 20.2 6.1 30.8 6.1s21-2.1 30.8-6.1l242.4-99.8c9-3.7 14.8-12.4 14.8-22.1s-5.8-18.4-14.8-22.1L318.8 38.1C309 34.1 298.6 32 288 32s-21 2.1-30.8 6.1L14.8 137.9C5.8 141.6 0 150.3 0 160L0 456c0 13.3 10.7 24 24 24s24-10.7 24-24l0-260.2zm48 71.7L96 384c0 53 86 96 192 96s192-43 192-96l0-116.6-142.9 58.9c-15.6 6.4-32.2 9.7-49.1 9.7s-33.5-3.3-49.1-9.7L96 267.4z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <h3
+                class="font-bold text-dark text-2xl mb-4 group-hover:text-white transition-colors duration-300"
+              >
+                Program Diploma (D3) dan Sarjana (S1)
+              </h3>
+              <p
+                class="font-normal text-[#163048] text-base group-hover:text-white/90 transition-colors duration-300"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem
+                velit viverra amet faucibus.
+              </p>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="group rounded-[20px] p-8 hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-400 hover:text-white hover:shadow-xl ease-in-out hover:scale-105 transition-transform duration-300 cursor-pointer"
+            >
+              <div
+                class="w-[92px] h-[92px] bg-[#e6f5fc] rounded-full flex items-center justify-center mb-6 group-hover:bg-white/20 transition-all duration-300"
+              >
+                <div class="w-[50%]">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                      fill="#008bf5"
+                      d="M128 64c0-35.3 28.7-64 64-64L384 0c35.3 0 64 28.7 64 64l0 64 64 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 192c0-35.3 28.7-64 64-64l64 0 0-64zM272 352c-17.7 0-32 14.3-32 32l0 80 96 0 0-80c0-17.7-14.3-32-32-32l-32 0zM128 368l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16zM112 256c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0zM512 368l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16zM496 256c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0zM264 104l0 32-32 0c-8.8 0-16 7.2-16 16l0 16c0 8.8 7.2 16 16 16l32 0 0 32c0 8.8 7.2 16 16 16l16 0c8.8 0 16-7.2 16-16l0-32 32 0c8.8 0 16-7.2 16-16l0-16c0-8.8-7.2-16-16-16l-32 0 0-32c0-8.8-7.2-16-16-16l-16 0c-8.8 0-16 7.2-16 16z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <h3
+                class="font-bold text-dark text-2xl mb-4 group-hover:text-white transition-colors duration-300"
+              >
+                Fakultas Kedokteran
+              </h3>
+              <p
+                class="font-normal text-[#163048] text-base group-hover:text-white/90 transition-colors duration-300"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem
+                velit viverra amet faucibus.
+              </p>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="group rounded-[20px] p-8 hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-400 hover:text-white hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+            >
+              <div
+                class="w-[92px] h-[92px] bg-[#e6f5fc] rounded-full flex items-center justify-center mb-6 group-hover:bg-white/20 transition-all duration-300"
+              >
+                <div class="w-[50%]">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path
+                      fill="#008bf5"
+                      d="M241.3-13c-11.4-2.3-23.1-2.3-34.5 0L19.3 24.5C8.1 26.7 0 36.6 0 48 0 58.3 6.5 67.3 16 70.6L16 144 .3 222.6c-.2 .9-.3 1.9-.3 2.9 0 8 6.5 14.6 14.6 14.6l34.9 0c8 0 14.6-6.5 14.6-14.6 0-1-.1-1.9-.3-2.9L48 144 48 77.3 96 86.9 96 144c0 70.7 57.3 128 128 128s128-57.3 128-128l0-57.1 76.7-15.3C439.9 69.3 448 59.4 448 48s-8.1-21.3-19.3-23.5L241.3-13zM224 224c-44.2 0-80-35.8-80-80l160 0c0 44.2-35.8 80-80 80zM120.1 320.1C58.7 348.3 16 410.3 16 482.3 16 498.7 29.3 512 45.7 512l154.3 0 0-146-57.4-43c-6.5-4.9-15.2-6.2-22.6-2.8zM248 512l154.3 0c16.4 0 29.7-13.3 29.7-29.7 0-72-42.7-134-104.1-162.1-7.4-3.4-16.1-2.1-22.6 2.8l-57.4 43 0 146z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <h3
+                class="font-bold text-dark text-2xl mb-4 group-hover:text-white transition-colors duration-300"
+              >
+                Program Studi Magister (S2)
+              </h3>
+              <p
+                class="font-normal text-[#163048] text-base group-hover:text-white/90 transition-colors duration-300"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem
+                velit viverra amet faucibus.
+              </p>
+            </div>
+
+            <!-- Card -->
+            <div
+              class="group rounded-[20px] p-8 hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-400 hover:text-white hover:shadow-xl hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer"
+            >
+              <div
+                class="w-[92px] h-[92px] bg-[#e6f5fc] rounded-full flex items-center justify-center mb-6 group-hover:bg-white/20 transition-all duration-300"
+              >
+                <div class="w-[50%]">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                      fill="#008bf5"
+                      d="M368.5 18.3l-50.1 50.1 125.3 125.3 50.1-50.1c21.9-21.9 21.9-57.3 0-79.2L447.7 18.3c-21.9-21.9-57.3-21.9-79.2 0zM279.3 97.2l-.5 .1-144.1 43.2c-19.9 6-35.7 21.2-42.3 41L3.8 445.8c-2.9 8.7-1.9 18.2 2.5 26L161.7 316.4c-1.1-4-1.6-8.1-1.6-12.4 0-26.5 21.5-48 48-48s48 21.5 48 48-21.5 48-48 48c-4.3 0-8.5-.6-12.4-1.6L40.3 505.7c7.8 4.4 17.2 5.4 26 2.5l264.3-88.6c19.7-6.6 35-22.4 41-42.3l43.2-144.1 .1-.5-135.5-135.5z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <h3
+                class="font-bold text-dark text-2xl mb-4 group-hover:text-white transition-colors duration-300"
+              >
+                Program Studi Doktor (S3)
+              </h3>
+              <p
+                class="font-normal text-[#163048] text-base group-hover:text-white/90 transition-colors duration-300"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem
+                velit viverra amet faucibus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section class="pb-16 lg:pb-24">
+        <div class="container mx-auto px-4 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div
+              id="default-carousel"
+              class="relative w-full"
+              data-carousel="slide"
+            >
+              <!-- Carousel wrapper -->
+              <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img
+                    src="assets/images/crowded.JPG"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="..."
+                  />
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img
+                    src="assets/images/crowded_women.JPG"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="..."
+                  />
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img
+                    src="assets/images/crowded_all.JPG"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <!-- Slider indicators -->
+              <div
+                class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
+              >
+                <button
+                  type="button"
+                  class="w-3 h-3 rounded-full"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                  data-carousel-slide-to="0"
+                ></button>
+                <button
+                  type="button"
+                  class="w-3 h-3 rounded-full"
+                  aria-current="false"
+                  aria-label="Slide 2"
+                  data-carousel-slide-to="1"
+                ></button>
+                <button
+                  type="button"
+                  class="w-3 h-3 rounded-full"
+                  aria-current="false"
+                  aria-label="Slide 3"
+                  data-carousel-slide-to="2"
+                ></button>
+              </div>
+              <!-- Slider controls -->
+              <button
+                type="button"
+                class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-prev
+              >
+                <span
+                  class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+                >
+                  <svg
+                    class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 6 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 1 1 5l4 4"
+                    />
+                  </svg>
+                  <span class="sr-only">Previous</span>
+                </span>
+              </button>
+              <button
+                type="button"
+                class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                data-carousel-next
+              >
+                <span
+                  class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+                >
+                  <svg
+                    class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 6 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 9 4-4-4-4"
+                    />
+                  </svg>
+                  <span class="sr-only">Next</span>
+                </span>
+              </button>
+            </div>
+
+            <div class="space-y-4">
+              <div id="accordion-collapse" data-accordion="collapse">
+                <!-- Item 1 -->
+                <h2 id="accordion-collapse-heading-1">
+                  <button
+                    type="button"
+                    class="flex items-center justify-between w-full p-5 font-semibold text-primary border border-primary rounded-t-xl focus:ring-4 focus:ring-primary/30 hover:bg-primary/10 transition-all duration-300 gap-3"
+                    data-accordion-target="#accordion-collapse-body-1"
+                    aria-expanded="true"
+                    aria-controls="accordion-collapse-body-1"
+                  >
+                    <span>Jalur Pendaftaran Program Diploma dan Sarjana</span>
+                    <svg
+                      data-accordion-icon
+                      class="w-3 h-3 rotate-180 shrink-0 text-primary"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5 5 1 1 5"
+                      />
+                    </svg>
+                  </button>
+                </h2>
+
+                <div
+                  id="accordion-collapse-body-1"
+                  class="hidden"
+                  aria-labelledby="accordion-collapse-heading-1"
+                >
+                  <div
+                    class="p-5 border border-t-0 border-primary/30 bg-primary/5"
+                  >
+                    <!-- Ganti flex-col jadi flex-row -->
+                    <div class="flex flex-col md:flex-row gap-2">
+                      <!-- Kolom Kiri -->
+                      <div class="flex-1 space-y-2">
+                        <p class="text-gray-700">
+                          - Jalur Undangan
+                        </p>
+                        <p class="text-gray-700">
+                          - Jalur Bebas Tes
+                        </p>
+                        <p class="text-gray-700">
+                          - Jalur Kelas Internasional
+                        </p>
+                        <p class="text-gray-700">
+                          - Jalur Tes Fakultas Kedokteran
+                        </p>
+                           <p class="text-gray-700">
+                          - Jalur RPL
+                        </p>
+                      </div>
+
+                      <!-- Kolom Kanan -->
+                      <div class="flex-1 space-y-2">
+                        <p class="text-gray-700">
+                          - Jalur Tes Doktor
+                        </p>
+                        <p class="text-gray-700">
+                          - Jalur Prestasi
+                        </p>
+                        <p class="text-gray-700">
+                          - Jalur Beasiswa
+                        </p>
+                        <p class="text-gray-700">
+                          - Jalur SBMPTMU
+                        </p>
+                            <a
+                          href="#"
+                          class="inline-flex items-center gap-2 font-medium text-primary text-base mt-8"
+                        >
+                          Many More..
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Item 2 -->
+                <h2 id="accordion-collapse-heading-3">
+                  <button
+                    type="button"
+                    class="flex items-center justify-between w-full p-5 font-semibold text-primary border border-primary rounded-b-xl focus:ring-4 focus:ring-primary/30 hover:bg-primary/10 transition-all duration-300 gap-3"
+                    data-accordion-target="#accordion-collapse-body-3"
+                    aria-expanded="false"
+                    aria-controls="accordion-collapse-body-3"
+                  >
+                    <span>Beasiswa UMSU</span>
+                    <svg
+                      data-accordion-icon
+                      class="w-3 h-3 shrink-0 text-primary"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5 5 1 1 5"
+                      />
+                    </svg>
+                  </button>
+                </h2>
+                <div
+                  id="accordion-collapse-body-3"
+                  class="hidden"
+                  aria-labelledby="accordion-collapse-heading-1"
+                >
+                  <div
+                    class="p-5 border border-t-0 border-primary/30 bg-primary/5"
+                  >
+                    <!-- Ganti flex-col jadi flex-row -->
+                    <div class="flex flex-col md:flex-row gap-2">
+                      <!-- Kolom Kiri -->
+                      <div class="flex-1 space-y-2">
+                        <p class="text-gray-700">- Beasiswa KIP Kuliah</p>
+                        <p class="text-gray-700">- Beasiswa Cendekia BAZNAS</p>
+                        <p class="text-gray-700">
+                          - Beasiswa Bank Syariah Indonesia
+                        </p>
+                        <p class="text-gray-700">
+                          - Beasiswa Ma'had Abu Ubaidah
+                        </p>
+                        <p class="text-gray-700">
+                          - Beasiswa Kartu Muhammadiyah Pintar
+                        </p>
+                      </div>
+
+                      <!-- Kolom Kanan -->
+                      <div class="flex-1 space-y-2">
+                        <p class="text-gray-700">
+                          - Beasiswa Anak Kandung Dosen dan Pegawai
+                        </p>
+                        <p class="text-gray-700">
+                          - Beasiswa Sang Surya LAZISMU
+                        </p>
+                        <p class="text-gray-700">- Beasiswa Adik Kakak</p>
+                        <p class="text-gray-700">- Beasiswa OSC</p>
+                        <a
+                          href="https://kemahasiswaan.umsu.ac.id/beasiswa/"
+                          class="inline-flex items-center gap-2 font-medium text-primary text-base mt-8"
+                        >
+                          Learn More
+                          <svg
+                            class="w-4 h-4"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            ></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container mx-auto px-4 lg:px-8">
+          <h2
+            class="font-bold text-[#2e2e2e] text-3xl mb-20 lg:text-[40px] text-center"
+          >
+            AKREDITASI PROGRAM STUDI
+          </h2>
+          <!-- <h2 class="font-bold text-primary text-3xl lg:text-[42px] mb-20 text-center">
+                    Universitas Muhammadiyah Sumatera Utara
+                </h2>  -->
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
+              class="group flex flex-col items-center justify-center rounded-[20px] p-8 text-center bg-white shadow-lg hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-400 hover:text-white hover:shadow-xl ease-in-out cursor-pointer hover:scale-105 transition-transform duration-300"
+            >
+              <div
+                class="w-[92px] h-[92px] bg-[#e6f5fc] rounded-full flex items-center justify-center mb-4 group-hover:bg-white/20 transition-all duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-10 h-10 text-blue-600 group-hover:text-white transition-colors duration-300"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="font-bold text-dark text-3xl mb-2 group-hover:text-white transition-colors duration-300"
+              >
+                <span class="count-up" data-target="20">0</span>
+              </h3>
+              <p
+                class="font-normal text-[#163048] text-lg group-hover:text-white/90 transition-colors duration-300"
+              >
+                UNGGUL
+              </p>
+            </div>
+
+            <div
+              class="group flex flex-col items-center justify-center rounded-[20px] p-8 text-center bg-white shadow-lg hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-400 hover:text-white hover:shadow-xl ease-in-out hover:scale-105 transition-transform duration-300 cursor-pointer"
+            >
+              <div
+                class="w-[92px] h-[92px] bg-[#e6f5fc] rounded-full flex items-center justify-center mb-4 group-hover:bg-white/20 transition-all duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-10 h-10 text-blue-600 group-hover:text-white transition-colors duration-300"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="font-bold text-dark text-3xl mb-2 group-hover:text-white transition-colors duration-300"
+              >
+                <span class="count-up" data-target="13">0</span>
+              </h3>
+              <p
+                class="font-normal text-[#163048] text-lg group-hover:text-white/90 transition-colors duration-300"
+              >
+                BAIK SEKALI
+              </p>
+            </div>
+
+            <div
+              class="group flex flex-col items-center justify-center rounded-[20px] p-8 text-center bg-white shadow-lg hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-400 hover:text-white hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+            >
+              <div
+                class="w-[92px] h-[92px] bg-[#e6f5fc] rounded-full flex items-center justify-center mb-4 group-hover:bg-white/20 transition-all duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-10 h-10 text-blue-600 group-hover:text-white transition-colors duration-300"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="font-bold text-dark text-3xl mb-2 group-hover:text-white transition-colors duration-300"
+              >
+                <span class="count-up" data-target="8">0</span>
+              </h3>
+              <p
+                class="font-normal text-[#163048] text-lg group-hover:text-white/90 transition-colors duration-300"
+              >
+                BAIK
+              </p>
+            </div>
+
+            <div
+              class="group flex flex-col items-center justify-center rounded-[20px] p-8 text-center bg-white shadow-lg hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-400 hover:text-white hover:shadow-xl hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer"
+            >
+              <div
+                class="w-[92px] h-[92px] bg-[#e6f5fc] rounded-full flex items-center justify-center mb-4 group-hover:bg-white/20 transition-all duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-10 h-10 text-blue-600 group-hover:text-white transition-colors duration-300"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="font-bold text-dark text-3xl mb-2 group-hover:text-white transition-colors duration-300"
+              >
+                <span class="count-up" data-target="5">0</span>
+              </h3>
+              <p
+                class="font-normal text-[#163048] text-lg group-hover:text-white/90 transition-colors duration-300"
+              >
+                Akreditasi B
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-primary/10 py-16 mt-20">
+        <div class="container mx-auto px-6 text-center">
+          <!-- Ikon Sosial Media -->
+          <div
+            class="flex flex-col md:flex-row justify-center items-center md:space-x-8 space-y-4 md:space-y-0"
+          >
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:scale-105 transition"
+            >
+              <svg
+                class="w-6 h-6"
+                viewBox="0 0 24 24"
+                fill="#FF0000"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.615 3.184C21.403 3.582 22.753 4.932 23.151 6.72 23.838 9.79 23.838 12.002 23.838 12.002S23.838 14.214 23.151 17.283C22.753 19.071 21.403 20.421 19.615 20.819 16.546 21.506 12 21.506 12 21.506S7.454 21.506 4.385 20.819C2.597 20.421 1.247 19.071 0.849 17.283 0.162 14.214 0.162 12.002 0.162 12.002S0.162 9.79 0.849 6.72C1.247 4.932 2.597 3.582 4.385 3.184 7.454 2.497 12 2.497 12 2.497S16.546 2.497 19.615 3.184ZM9.545 8.545V15.455L15.818 12L9.545 8.545Z"
+                />
+              </svg>
+              <span class="text-sm text-primary">UMSU Medan</span>
+            </a>
+
+            <!-- Twitter -->
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:scale-105 transition"
+            >
+              <div class="flex items-center space-x-2">
+                <svg
+                  class="w-6 h-6"
+                  viewBox="0 0 24 24"
+                  fill="#000000"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18.244 2H21.5l-7.5 8.57L22 22h-6.343l-4.96-6.43L5.039 22H1.78l8.064-9.207L2 2h6.465l4.478 5.884L18.244 2zm-1.118 17h1.71L7.073 4.5H5.25l11.876 14.5z"
+                  />
+                </svg>
+              </div>
+
+              <span class="text-sm text-primary">UMSU Medan</span>
+            </a>
+
+            <!-- Facebook -->
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:scale-105 transition"
+            >
+              <svg
+                class="w-6 h-6"
+                viewBox="0 0 24 24"
+                fill="#1877F2"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22.675 0H1.325C.593 0 0 .593 0 1.326V22.67c0 .733.593 1.326 1.325 1.326H12.82V14.7h-3.13v-3.6h3.13V8.41c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.31h3.59l-.467 3.6h-3.123V24h6.117c.73 0 1.324-.593 1.324-1.326V1.326C24 .593 23.406 0 22.675 0z"
+                />
+              </svg>
+              <span class="text-sm text-primary">UMSU Medan</span>
+            </a>
+
+            <!-- Instagram -->
+            <a
+              href="#"
+              class="flex items-center gap-2 hover:scale-105 transition"
+            >
+              <svg
+                class="w-6 h-6"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient
+                    id="instaGradient"
+                    x1="0"
+                    y1="0"
+                    x2="1"
+                    y2="1"
+                  >
+                    <stop offset="0%" stop-color="#F58529" />
+                    <stop offset="50%" stop-color="#DD2A7B" />
+                    <stop offset="100%" stop-color="#515BD4" />
+                  </linearGradient>
+                </defs>
+                <path
+                  fill="url(#instaGradient)"
+                  d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7zm4.75-.88a.88.88 0 1 1-1.75 0a.88.88 0 0 1 1.75 0z"
+                />
+              </svg>
+              <span class="text-sm text-primary">UMSU Medan</span>
+            </a>
+          </div>
+
+          <!-- Info Kontak -->
+          <div class="mt-10 text-primary/90">
+            <p class="font-semibold text-lg">
+              Universitas Muhammadiyah Sumatera Utara
+            </p>
+            <p class="text-sm mt-1">Jl. Kapten Muchtar Basri No. 3, Medan</p>
+            <p class="text-sm mt-1">
+              Email:
+              <a
+                href="mailto:info@umsu.ac.id"
+                class="text-primary hover:underline"
+                >penmaru@umsu.ac.id</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-blue-700 py-16">
+        <div class="container mx-auto px-4 lg:px-8">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12"
+          >
+            <!-- Company Info -->
+            <div>
+              <div class="font-bold text-2xl lg:text-[32px]">
+                <img
+                  src="https://admission.umsu.ac.id/images/umsu/logo-admisi.png"
+                  class="w-[180px] h-[45px]"
+                  alt="UMSU Admission Logo"
+                />
+              </div>
+              <p class="font-normal text-white text-base">
+                Penerimaan Mahasiswa Baru Universitas Muhammadiyah Sumatera
+                Utara
+              </p>
+            </div>
+
+            <!-- Useful Links -->
+            <div>
+              <h3 class="font-semibold text-white text-2xl mb-6">
+                Useful Links
+              </h3>
+              <ul class="space-y-3">
+                <li>
+                  <a
+                    href="#"
+                    class="font-medium text-white text-base hover:underline"
+                    >Beranda</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="font-medium text-white text-base hover:underline"
+                    >Pendaftaran</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="font-medium text-white text-base hover:underline"
+                    >Informasi</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="font-medium text-white text-base hover:underline"
+                    >Biaya Kuliah</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="font-medium text-white text-base hover:underline"
+                    >Brosur</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="font-medium text-white text-base hover:underline"
+                    >Kontak</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Address -->
+            <div>
+              <h3 class="font-semibold text-white text-2xl mb-6">Address</h3>
+              <div class="rounded-lg overflow-hidden shadow-lg">
+                <iframe
+                  class="w-full h-64 border-0"
+                  loading="lazy"
+                  allowfullscreen
+                  referrerpolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps?q=Universitas%20Muhammadiyah%20Sumatera%20Utara%20Medan&z=16&output=embed"
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <hr class="border-white/30 mb-6" />
+
+          <!-- Copyright -->
+          <div class="text-center">
+            <p
+              class="font-normal text-white text-base flex items-center justify-center gap-2"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                ></path>
+              </svg>
+              2025 All Right Reserved
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    initCountUp();
+  </script>
+</html>
