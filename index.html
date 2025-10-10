@@ -14,6 +14,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.css"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.js"></script>
     <script src="assets/css/tailwind.config.js"></script>
     <script src="assets/js/main.js"></script>
@@ -293,18 +298,21 @@
       </section>
 
       <!-- Program Studi -->
-      <section class="py-16 lg:py-24">
+      <section class="py-16 lg:pt-24 lg:pb-14">
         <div class="container mx-auto px-4 lg:px-8">
-          <h2
-            class="font-bold text-[#2e2e2e] text-3xl lg:text-[40px] mb-8 text-center lg:text-center"
-          >
-            PROGRAM STUDI
+          <h2 class="text-3xl lg:text-4xl font-bold text-center text-dark mb-4">
+            Program Studi
           </h2>
+
           <h2
-            class="font-bold text-primary text-3xl lg:text-[42px] mb-20 text-center lg:text-center"
+            class="text-3xl lg:text-4xl font-bold text-center text-primary mb-4"
           >
             Universitas Muhammadiyah Sumatera Utara
           </h2>
+          <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">
+            Temukan jurusan yang sesuai bakat dan minat Anda. Siap membentuk
+            masa depan unggul!
+          </p>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Card -->
@@ -427,308 +435,473 @@
       </section>
 
       <!-- Why Choose Us Section -->
-      <section class="pb-16 lg:pb-24">
+      <section class="pb-8 pt-4 bg-gray-50">
         <div class="container mx-auto px-4 lg:px-8">
-          <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div
+            id="default-carousel"
+            class="relative w-full mb-16"
+            data-carousel="slide"
+          ></div>
+          <div
+            id="default-carousel"
+            class="relative w-full mb-16"
+            data-carousel="slide"
+          >
             <div
-              id="default-carousel"
-              class="relative w-full"
-              data-carousel="slide"
+              class="relative h-56 overflow-hidden rounded-xl shadow-lg md:h-[650px]"
             >
-              <!-- Carousel wrapper -->
-              <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                <!-- Item 1 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <img
-                    src="assets/images/crowded.JPG"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                    alt="..."
-                  />
-                </div>
-                <!-- Item 2 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <img
-                    src="assets/images/crowded_women.JPG"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                    alt="..."
-                  />
-                </div>
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <img
-                    src="assets/images/crowded_all.JPG"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                    alt="..."
-                  />
-                </div>
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="assets/images/crowded.JPG"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="Suasana pendaftaran mahasiswa baru"
+                />
               </div>
-              <!-- Slider indicators -->
-              <div
-                class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
-              >
-                <button
-                  type="button"
-                  class="w-3 h-3 rounded-full"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                  data-carousel-slide-to="0"
-                ></button>
-                <button
-                  type="button"
-                  class="w-3 h-3 rounded-full"
-                  aria-current="false"
-                  aria-label="Slide 2"
-                  data-carousel-slide-to="1"
-                ></button>
-                <button
-                  type="button"
-                  class="w-3 h-3 rounded-full"
-                  aria-current="false"
-                  aria-label="Slide 3"
-                  data-carousel-slide-to="2"
-                ></button>
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="assets/images/crowded_women.JPG"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="Mahasiswi baru"
+                />
               </div>
-              <!-- Slider controls -->
-              <button
-                type="button"
-                class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                data-carousel-prev
-              >
-                <span
-                  class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-                >
-                  <svg
-                    class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 6 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 1 1 5l4 4"
-                    />
-                  </svg>
-                  <span class="sr-only">Previous</span>
-                </span>
-              </button>
-              <button
-                type="button"
-                class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                data-carousel-next
-              >
-                <span
-                  class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-                >
-                  <svg
-                    class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 6 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m1 9 4-4-4-4"
-                    />
-                  </svg>
-                  <span class="sr-only">Next</span>
-                </span>
-              </button>
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="assets/images/crowded_all.JPG"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="Keramaian di kampus"
+                />
+              </div>
             </div>
 
-            <div class="space-y-4">
-              <div id="accordion-collapse" data-accordion="collapse">
-                <!-- Item 1 -->
-                <h2 id="accordion-collapse-heading-1">
-                  <button
-                    type="button"
-                    class="flex items-center justify-between w-full p-5 font-semibold text-primary border border-primary rounded-t-xl focus:ring-4 focus:ring-primary/30 hover:bg-primary/10 transition-all duration-300 gap-3"
-                    data-accordion-target="#accordion-collapse-body-1"
-                    aria-expanded="true"
-                    aria-controls="accordion-collapse-body-1"
-                  >
-                    <span>Jalur Pendaftaran Program Diploma dan Sarjana</span>
-                    <svg
-                      data-accordion-icon
-                      class="w-3 h-3 rotate-180 shrink-0 text-primary"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 10 6"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 5 5 1 1 5"
-                      />
-                    </svg>
-                  </button>
-                </h2>
+            <!-- Indicators -->
+            <div
+              class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3"
+            >
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="true"
+                aria-label="Slide 1"
+                data-carousel-slide-to="0"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="false"
+                aria-label="Slide 2"
+                data-carousel-slide-to="1"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="false"
+                aria-label="Slide 3"
+                data-carousel-slide-to="2"
+              ></button>
+            </div>
 
-                <div
-                  id="accordion-collapse-body-1"
-                  class="hidden"
-                  aria-labelledby="accordion-collapse-heading-1"
+            <!-- Controls -->
+            <button
+              type="button"
+              class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-prev
+            >
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 hover:bg-white/50 transition-all"
+              >
+                <svg
+                  class="w-4 h-4 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
                 >
-                  <div
-                    class="p-5 border border-t-0 border-primary/30 bg-primary/5"
-                  >
-                    <!-- Ganti flex-col jadi flex-row -->
-                    <div class="flex flex-col md:flex-row gap-2">
-                      <!-- Kolom Kiri -->
-                      <div class="flex-1 space-y-2">
-                        <p class="text-gray-700">
-                          - Jalur Undangan
-                        </p>
-                        <p class="text-gray-700">
-                          - Jalur Bebas Tes
-                        </p>
-                        <p class="text-gray-700">
-                          - Jalur Kelas Internasional
-                        </p>
-                        <p class="text-gray-700">
-                          - Jalur Tes Fakultas Kedokteran
-                        </p>
-                           <p class="text-gray-700">
-                          - Jalur RPL
-                        </p>
-                      </div>
-
-                      <!-- Kolom Kanan -->
-                      <div class="flex-1 space-y-2">
-                        <p class="text-gray-700">
-                          - Jalur Tes Doktor
-                        </p>
-                        <p class="text-gray-700">
-                          - Jalur Prestasi
-                        </p>
-                        <p class="text-gray-700">
-                          - Jalur Beasiswa
-                        </p>
-                        <p class="text-gray-700">
-                          - Jalur SBMPTMU
-                        </p>
-                            <a
-                          href="#"
-                          class="inline-flex items-center gap-2 font-medium text-primary text-base mt-8"
-                        >
-                          Many More..
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Item 2 -->
-                <h2 id="accordion-collapse-heading-3">
-                  <button
-                    type="button"
-                    class="flex items-center justify-between w-full p-5 font-semibold text-primary border border-primary rounded-b-xl focus:ring-4 focus:ring-primary/30 hover:bg-primary/10 transition-all duration-300 gap-3"
-                    data-accordion-target="#accordion-collapse-body-3"
-                    aria-expanded="false"
-                    aria-controls="accordion-collapse-body-3"
-                  >
-                    <span>Beasiswa UMSU</span>
-                    <svg
-                      data-accordion-icon
-                      class="w-3 h-3 shrink-0 text-primary"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 10 6"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 5 5 1 1 5"
-                      />
-                    </svg>
-                  </button>
-                </h2>
-                <div
-                  id="accordion-collapse-body-3"
-                  class="hidden"
-                  aria-labelledby="accordion-collapse-heading-1"
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 1 1 5l4 4"
+                  />
+                </svg>
+              </span>
+            </button>
+            <button
+              type="button"
+              class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-next
+            >
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 hover:bg-white/50 transition-all"
+              >
+                <svg
+                  class="w-4 h-4 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
                 >
-                  <div
-                    class="p-5 border border-t-0 border-primary/30 bg-primary/5"
-                  >
-                    <!-- Ganti flex-col jadi flex-row -->
-                    <div class="flex flex-col md:flex-row gap-2">
-                      <!-- Kolom Kiri -->
-                      <div class="flex-1 space-y-2">
-                        <p class="text-gray-700">- Beasiswa KIP Kuliah</p>
-                        <p class="text-gray-700">- Beasiswa Cendekia BAZNAS</p>
-                        <p class="text-gray-700">
-                          - Beasiswa Bank Syariah Indonesia
-                        </p>
-                        <p class="text-gray-700">
-                          - Beasiswa Ma'had Abu Ubaidah
-                        </p>
-                        <p class="text-gray-700">
-                          - Beasiswa Kartu Muhammadiyah Pintar
-                        </p>
-                      </div>
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 9 4-4-4-4"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <h2
+            class="text-3xl lg:text-4xl font-bold text-center text-dark mb-4 pt-8"
+          >
+            Jalur Pendaftaran<span class="text-primary"> UMSU</span>
+          </h2>
+          <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">
+            Pilih jalur pendaftaran fleksibel sesuai kebutuhan Anda. Mudah,
+            cepat, dan pasti!
+          </p>
 
-                      <!-- Kolom Kanan -->
-                      <div class="flex-1 space-y-2">
-                        <p class="text-gray-700">
-                          - Beasiswa Anak Kandung Dosen dan Pegawai
-                        </p>
-                        <p class="text-gray-700">
-                          - Beasiswa Sang Surya LAZISMU
-                        </p>
-                        <p class="text-gray-700">- Beasiswa Adik Kakak</p>
-                        <p class="text-gray-700">- Beasiswa OSC</p>
-                        <a
-                          href="https://kemahasiswaan.umsu.ac.id/beasiswa/"
-                          class="inline-flex items-center gap-2 font-medium text-primary text-base mt-8"
-                        >
-                          Learn More
-                          <svg
-                            class="w-4 h-4"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                            ></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div
+              class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out"
+            >
+              <div class="mb-4">
+                <div
+                  class="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full"
+                >
+                  <i class="fa-solid fa-paper-plane"></i>
                 </div>
               </div>
+              <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                Jalur Undangan
+              </h2>
+              <p class="mb-4 text-sm text-gray-600">
+                Pendaftaran tanpa tes untuk siswa berprestasi yang
+                direkomendasikan oleh sekolah.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200"
+              >
+                Lihat Detail
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+
+            <div
+              class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out"
+            >
+              <div class="mb-4">
+                <div
+                  class="flex items-center justify-center w-12 h-12 bg-green-100 text-green-600 rounded-full"
+                >
+                  <i class="fa-solid fa-file-signature"></i>
+                </div>
+              </div>
+              <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                Jalur Bebas Tes
+              </h2>
+              <p class="mb-4 text-sm text-gray-600">
+                Untuk calon mahasiswa dengan nilai akademik atau non-akademik
+                yang memenuhi syarat tertentu.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200"
+              >
+                Lihat Detail
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+
+            <div
+              class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out"
+            >
+              <div class="mb-4">
+                <div
+                  class="flex items-center justify-center w-12 h-12 bg-purple-100 text-purple-600 rounded-full"
+                >
+                  <i class="fa-solid fa-globe"></i>
+                </div>
+              </div>
+              <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                Jalur Kelas Internasional
+              </h2>
+              <p class="mb-4 text-sm text-gray-600">
+                Program khusus dengan kurikulum global dan kesempatan pertukaran
+                pelajar ke luar negeri.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200"
+              >
+                Lihat Detail
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+
+            <div
+              class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out"
+            >
+              <div class="mb-4">
+                <div
+                  class="flex items-center justify-center w-12 h-12 bg-red-100 text-red-600 rounded-full"
+                >
+                  <i class="fa-solid fa-stethoscope"></i>
+                </div>
+              </div>
+              <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                Jalur Tes Fakultas Kedokteran
+              </h2>
+              <p class="mb-4 text-sm text-gray-600">
+                Seleksi khusus dengan tes akademik dan wawancara bagi calon
+                mahasiswa Fakultas Kedokteran.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200"
+              >
+                Lihat Detail
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <h2
+            class="text-3xl lg:text-4xl font-bold text-center text-dark mt-16 pt-8 mb-6"
+          >
+            Beasiswa <span class="text-primary"> UMSU</span>
+          </h2>
+          <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">
+            Raih pendidikan terbaik tanpa biaya. Banyak beasiswa prestasi
+            menanti Anda!
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div
+              class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out"
+            >
+              <div class="mb-4">
+                <div
+                  class="flex items-center justify-center w-12 h-12 bg-yellow-100 text-yellow-600 rounded-full"
+                >
+                  <i class="fa-solid fa-landmark"></i>
+                </div>
+              </div>
+              <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                Beasiswa KIP Kuliah
+              </h2>
+              <p class="mb-4 text-sm text-gray-600">
+                Diberikan kepada mahasiswa berprestasi dari keluarga kurang
+                mampu.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200"
+              >
+                Lihat Detail
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+
+            <div
+              class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out"
+            >
+              <div class="mb-4">
+                <div
+                  class="flex items-center justify-center w-12 h-12 bg-teal-100 text-teal-600 rounded-full"
+                >
+                  <i class="fa-solid fa-seedling"></i>
+                </div>
+              </div>
+              <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                Beasiswa Cendekia BAZNAS
+              </h2>
+              <p class="mb-4 text-sm text-gray-600">
+                Untuk mahasiswa aktif yang memiliki komitmen terhadap dakwah dan
+                pemberdayaan umat.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200"
+              >
+                Lihat Detail
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+
+            <div
+              class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out"
+            >
+              <div class="mb-4">
+                <div
+                  class="flex items-center justify-center w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full"
+                >
+                  <i class="fa-solid fa-building-columns"></i>
+                </div>
+              </div>
+              <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                Beasiswa Bank Syariah Indonesia
+              </h2>
+              <p class="mb-4 text-sm text-gray-600">
+                Dukungan biaya pendidikan dari BSI untuk mahasiswa berprestasi.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200"
+              >
+                Lihat Detail
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+
+            <div
+              class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out"
+            >
+              <div class="mb-4">
+                <div
+                  class="flex items-center justify-center w-12 h-12 bg-orange-100 text-orange-600 rounded-full"
+                >
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                Beasiswa OSC
+              </h2>
+              <p class="mb-4 text-sm text-gray-600">
+                Beasiswa prestisius hasil kerja sama UMSU dengan platform OSC
+                Indonesia.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200"
+              >
+                Lihat Detail
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  ></path>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       <section>
-        <div class="container mx-auto px-4 lg:px-8">
+        <div class="container mx-auto">
           <h2
-            class="font-bold text-[#2e2e2e] text-3xl mb-20 lg:text-[40px] text-center"
+            class="text-3xl lg:text-4xl font-bold text-center text-dark mt-16 mb-6"
           >
-            AKREDITASI PROGRAM STUDI
+            Akreditasi Program Studi
           </h2>
-          <!-- <h2 class="font-bold text-primary text-3xl lg:text-[42px] mb-20 text-center">
-                    Universitas Muhammadiyah Sumatera Utara
-                </h2>  -->
+          <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">
+            Lulusan siap bersaing, karena semua program studi telah
+            terakreditasi.
+          </p>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div
-              class="group flex flex-col items-center justify-center rounded-[20px] p-8 text-center bg-white shadow-lg hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-400 hover:text-white hover:shadow-xl ease-in-out cursor-pointer hover:scale-105 transition-transform duration-300"
+              class="group flex flex-col items-center justify-center rounded-[20px] p-8 text-center bg-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-400 hover:text-white hover:shadow-xl ease-in-out cursor-pointer hover:scale-105 transition-transform duration-300"
             >
               <div
                 class="w-[92px] h-[92px] bg-[#e6f5fc] rounded-full flex items-center justify-center mb-4 group-hover:bg-white/20 transition-all duration-300"
@@ -761,7 +934,7 @@
             </div>
 
             <div
-              class="group flex flex-col items-center justify-center rounded-[20px] p-8 text-center bg-white shadow-lg hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-400 hover:text-white hover:shadow-xl ease-in-out hover:scale-105 transition-transform duration-300 cursor-pointer"
+              class="group flex flex-col items-center justify-center rounded-[20px] p-8 text-center bg-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-400 hover:text-white hover:shadow-xl ease-in-out hover:scale-105 transition-transform duration-300 cursor-pointer"
             >
               <div
                 class="w-[92px] h-[92px] bg-[#e6f5fc] rounded-full flex items-center justify-center mb-4 group-hover:bg-white/20 transition-all duration-300"
@@ -794,7 +967,7 @@
             </div>
 
             <div
-              class="group flex flex-col items-center justify-center rounded-[20px] p-8 text-center bg-white shadow-lg hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-400 hover:text-white hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+              class="group flex flex-col items-center justify-center rounded-[20px] p-8 text-center bg-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-400 hover:text-white hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
             >
               <div
                 class="w-[92px] h-[92px] bg-[#e6f5fc] rounded-full flex items-center justify-center mb-4 group-hover:bg-white/20 transition-all duration-300"
@@ -827,7 +1000,7 @@
             </div>
 
             <div
-              class="group flex flex-col items-center justify-center rounded-[20px] p-8 text-center bg-white shadow-lg hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-400 hover:text-white hover:shadow-xl hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer"
+              class="group flex flex-col items-center justify-center rounded-[20px] p-8 text-center bg-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-400 hover:text-white hover:shadow-xl hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer"
             >
               <div
                 class="w-[92px] h-[92px] bg-[#e6f5fc] rounded-full flex items-center justify-center mb-4 group-hover:bg-white/20 transition-all duration-300"

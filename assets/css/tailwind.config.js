@@ -1,4 +1,5 @@
 tailwind.config = {
+  darkMode: "false",
   theme: {
     extend: {
       fontFamily: {
