@@ -808,10 +808,58 @@
           </div>
         </div>
       </footer>
+    </div>    <!-- Floating Chat Button -->
+<div class="fixed bottom-6 right-6 z-50">
+  <!-- Tombol chat -->
+  <button id="chatButton"
+    class="bg-blue-600 hover:bg-blue-700 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition">
+    <i class="fa-solid fa-comment-dots text-2xl"></i>
+  </button>
+
+  <!-- Popup chat -->
+  <div id="chatPopup"
+    class="hidden absolute bottom-20 right-0 w-80 bg-white border border-gray-200 rounded-xl shadow-lg p-4">
+    <div class="flex justify-between items-center mb-3">
+      <h3 class="font-semibold text-gray-800 text-lg">Kirim Pesan</h3>
+      <button id="closeChat" class="text-gray-400 hover:text-gray-600">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
     </div>
+
+    <form>
+      <div class="mb-3">
+        <label for="subject" class="block text-sm text-gray-600 mb-1">Subjek</label>
+        <input type="text" id="subject" placeholder="Tuliskan subjek"
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+      </div>
+
+      <div class="mb-3">
+        <label for="message" class="block text-sm text-gray-600 mb-1">Pesan</label>
+        <textarea id="message" rows="3" placeholder="Tuliskan pesan Anda"
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
+      </div>
+
+      <button type="button"
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition">
+        <i class="fa-solid fa-paper-plane mr-2"></i> Kirim
+      </button>
+    </form>
+  </div>
+</div>
   </body>
 
   <script>
+    const chatButton = document.getElementById("chatButton");
+  const chatPopup = document.getElementById("chatPopup");
+  const closeChat = document.getElementById("closeChat");
+
+  chatButton.addEventListener("click", () => {
+    chatPopup.classList.toggle("hidden");
+  });
+
+  closeChat.addEventListener("click", () => {
+    chatPopup.classList.add("hidden");
+  });
     initMobileMenu("menu-btn", "mobile-menu");
     initCountUp();
   </script>
