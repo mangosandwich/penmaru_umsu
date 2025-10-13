@@ -83,12 +83,12 @@
             >
               Log in
             </a>
-               <a
-                href="../../pages/auth/daftar.html"
-                class="px-6 py-2.5 rounded-full border-2 border-blue-500 text-blue-500 font-semibold text-lg hover:bg-sky-500/10 hover:shadow-md hover:shadow-sky-300/30 transition-all duration-300"
-              >
-                Daftar
-              </a>
+            <a
+              href="../../pages/auth/daftar.html"
+              class="px-6 py-2.5 rounded-full border-2 border-blue-500 text-blue-500 font-semibold text-lg hover:bg-sky-500/10 hover:shadow-md hover:shadow-sky-300/30 transition-all duration-300"
+            >
+              Daftar
+            </a>
           </div>
 
           <!-- Mobile Menu Button -->
@@ -114,7 +114,7 @@
         >
           <a
             href="../../index.html"
-            class="nav-link block font-medium text-lg hover:text-blue-600"
+            class="nav-link block menu-link font-medium text-lg hover:text-blue-600"
             >Beranda</a
           >
           <a
@@ -149,12 +149,12 @@
             >
               Log in
             </a>
-                  <a
-                href="../../pages/auth/daftar.html"
-                class="px-6 py-2.5 rounded-full border-2 text-center border-blue-500 text-blue-500 font-semibold text-lg hover:bg-sky-500/10 hover:shadow-md hover:shadow-sky-300/30 transition-all duration-300"
-              >
-                Daftar
-              </a>
+            <a
+              href="../../pages/auth/daftar.html"
+              class="px-6 py-2.5 rounded-full border-2 text-center border-blue-500 text-blue-500 font-semibold text-lg hover:bg-sky-500/10 hover:shadow-md hover:shadow-sky-300/30 transition-all duration-300"
+            >
+              Daftar
+            </a>
           </div>
         </div>
       </header>
@@ -951,12 +951,7 @@
   </body>
 
   <script>
-    const menuBtn = document.getElementById("menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
+    initMobileMenu("menu-btn", "mobile-menu");
     initCountUp();
   </script>
 </html>

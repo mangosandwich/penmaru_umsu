@@ -36,6 +36,46 @@ function initCountUp() {
   counters.forEach((counter) => observer.observe(counter));
 }
 
+function initMobileMenu(
+  menuBtnId,
+  menuContainerId,
+  linkSelector = ".menu-link"
+) {
+  const menuBtn = document.getElementById(menuBtnId);
+  const mobileMenu = document.getElementById(menuContainerId);
+
+  if (!menuBtn || !mobileMenu) return;
+
+  // Pastikan tertutup di awal
+  mobileMenu.classList.add("hidden");
+
+  // Toggle buka/tutup menu saat tombol diklik
+  menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  // Tutup menu saat klik di luar area menu
+  document.addEventListener("click", (e) => {
+    if (
+      !mobileMenu.classList.contains("hidden") &&
+      !mobileMenu.contains(e.target) &&
+      e.target !== menuBtn
+    ) {
+      mobileMenu.classList.add("hidden");
+    }
+  });
+
+  // Tutup menu saat salah satu link diklik
+  document.querySelectorAll(linkSelector).forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  });
+}
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const currentPage = window.location.pathname.split("/").pop(); // Ambil nama file HTML aktif
   const navLinks = document.querySelectorAll(".nav-link");
