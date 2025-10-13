@@ -62,13 +62,15 @@
             class="container mx-auto px-4 lg:px-8 py-6 lg:py-8 flex items-center justify-between"
           >
             <!-- Logo -->
-            <div class="font-bold text-2xl lg:text-[32px]">
-              <img
-                src="https://admission.umsu.ac.id/images/umsu/logo-admisi.png"
-                class="w-[180px] h-[45px]"
-                alt="UMSU Admission Logo"
-              />
-            </div>
+            <a href="index.html">
+              <div class="font-bold text-2xl lg:text-[32px]">
+                <img
+                  src="https://admission.umsu.ac.id/images/umsu/logo-admisi.png"
+                  class="w-[180px] h-[45px]"
+                  alt="UMSU Admission Logo"
+                />
+              </div>
+            </a>
 
             <!-- Desktop Menu -->
             <div class="hidden lg:flex items-center space-x-8">
@@ -1286,7 +1288,7 @@
         </div>
       </section>
 
-      <section class="bg-gray-50 flex items-center justify-center min-h-screen">
+      <div class="bg-gray-50 flex items-center justify-center min-h-screen">
         <div class="w-full max-w-6xl mx-auto">
           <h2
             class="text-3xl lg:text-4xl font-bold text-center text-dark mb-6"
@@ -1299,127 +1301,195 @@
           </p>
 
           <div class="carousel-container relative w-full overflow-hidden">
-            <div id="carousel-track" class="flex w-max">
+            <div id="carousel-track" class="flex w-max p-4">
               <div class="card w-[300px] mx-4 flex-shrink-0">
                 <div
-                  class="bg-white rounded-lg shadow-lg p-6 relative h-full flex flex-col"
+                  class="flex flex-col h-full rounded-lg shadow-lg overflow-hidden"
                 >
-                  <div>
+                  <div class="relative h-48">
                     <img
-                      src="https://via.placeholder.com/280x160/FFC0CB/000000?Text=Alumni+UMSU+1"
-                      alt="Alumni 1"
-                      class="w-full h-40 object-cover rounded-t-lg mb-4"
+                      src="assets/images/13.png"
+                      alt="Alumni Aulia Rahman"
+                      class="absolute inset-0 w-full h-full object-cover"
                     />
-                    <h3 class="font-bold text-lg">Aulia Rahman</h3>
-                    <p class="text-sm text-gray-500">
-                      Digital Marketer at Gojek
-                    </p>
-                    <p class="text-xs text-gray-400 mb-4">
-                      Fakultas Ekonomi dan Bisnis
-                    </p>
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+                    ></div>
+                    <div class="absolute bottom-0 left-0 p-4 text-white">
+                      <h3 class="font-bold text-lg">Aulia Rahman</h3>
+                      <p class="text-sm text-white/90">
+                        Digital Marketer at Gojek
+                      </p>
+                      <p class="text-xs text-white/70">
+                        Fakultas Ekonomi dan Bisnis
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="bg-white p-6 flex-grow flex flex-col">
                     <span
-                      class="text-5xl text-gray-200 absolute top-0 right-6 font-serif"
+                      class="text-6xl text-blue-400 font-serif leading-none text-center"
                       >”</span
                     >
+                    <p class="text-gray-700 text-sm mt-2">
+                      Di UMSU, saya tidak hanya belajar teori, tapi juga
+                      didorong untuk aktif berorganisasi. Pengalaman ini sangat
+                      berharga dan membentuk saya di dunia kerja.
+                    </p>
                   </div>
-                  <p class="text-gray-600 text-sm mt-2 flex-grow">
-                    “Di UMSU, saya tidak hanya belajar teori, tapi juga didorong
-                    untuk aktif berorganisasi. Pengalaman ini sangat berharga
-                    dan membentuk saya di dunia kerja.”
-                  </p>
                 </div>
               </div>
 
               <div class="card w-[300px] mx-4 flex-shrink-0">
                 <div
-                  class="bg-white rounded-lg shadow-lg p-6 relative h-full flex flex-col"
+                  class="flex flex-col h-full rounded-lg shadow-lg overflow-hidden"
                 >
-                  <div>
+                  <div class="relative h-48">
                     <img
-                      src="https://via.placeholder.com/280x160/87CEEB/000000?Text=Alumni+UMSU+2"
-                      alt="Alumni 2"
-                      class="w-full h-40 object-cover rounded-t-lg mb-4"
+                      src="assets/images/13.png"
+                      alt="Alumni Bunga Lestari"
+                      class="absolute inset-0 w-full h-full object-cover"
                     />
-                    <h3 class="font-bold text-lg">Bunga Lestari</h3>
-                    <p class="text-sm text-gray-500">
-                      UI/UX Designer at Tokopedia
-                    </p>
-                    <p class="text-xs text-gray-400 mb-4">Fakultas Teknik</p>
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+                    ></div>
+                    <div class="absolute bottom-0 left-0 p-4 text-white">
+                      <h3 class="font-bold text-lg">Bunga Lestari</h3>
+                      <p class="text-sm text-white/90">
+                        UI/UX Designer at Tokopedia
+                      </p>
+                      <p class="text-xs text-white/70">Fakultas Teknik</p>
+                    </div>
+                  </div>
+                  <div class="bg-white p-6 flex-grow flex flex-col">
                     <span
-                      class="text-5xl text-gray-200 absolute top-0 right-6 font-serif"
+                      class="text-6xl text-blue-400 font-serif leading-none text-center"
                       >”</span
                     >
+                    <p class="text-gray-700 text-sm mt-2">
+                      Kurikulum yang relevan dengan industri dan dosen yang ahli
+                      di bidangnya membuat saya siap bersaing. UMSU adalah
+                      tempat terbaik untuk berkembang.
+                    </p>
                   </div>
-                  <p class="text-gray-600 text-sm mt-2 flex-grow">
-                    “Kurikulum yang relevan dengan industri dan dosen yang ahli
-                    di bidangnya membuat saya siap bersaing. UMSU adalah tempat
-                    terbaik untuk berkembang.”
-                  </p>
                 </div>
               </div>
 
               <div class="card w-[300px] mx-4 flex-shrink-0">
                 <div
-                  class="bg-white rounded-lg shadow-lg p-6 relative h-full flex flex-col"
+                  class="flex flex-col h-full rounded-lg shadow-lg overflow-hidden"
                 >
-                  <div>
+                  <div class="relative h-48">
                     <img
-                      src="https://via.placeholder.com/280x160/98FB98/000000?Text=Alumni+UMSU+3"
-                      alt="Alumni 3"
-                      class="w-full h-40 object-cover rounded-t-lg mb-4"
+                      src="assets/images/13.png"
+                      alt="Alumni Chandra Wijaya"
+                      class="absolute inset-0 w-full h-full object-cover"
                     />
-                    <h3 class="font-bold text-lg">Chandra Wijaya</h3>
-                    <p class="text-sm text-gray-500">
-                      Dokter di RSUP H. Adam Malik
-                    </p>
-                    <p class="text-xs text-gray-400 mb-4">
-                      Fakultas Kedokteran
-                    </p>
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+                    ></div>
+                    <div class="absolute bottom-0 left-0 p-4 text-white">
+                      <h3 class="font-bold text-lg">Chandra Wijaya</h3>
+                      <p class="text-sm text-white/90">
+                        Dokter di RSUP H. Adam Malik
+                      </p>
+                      <p class="text-xs text-white/70">Fakultas Kedokteran</p>
+                    </div>
+                  </div>
+                  <div class="bg-white p-6 flex-grow flex flex-col">
                     <span
-                      class="text-5xl text-gray-200 absolute top-0 right-6 font-serif"
+                      class="text-6xl text-blue-400 font-serif leading-none text-center"
                       >”</span
                     >
+                    <p class="text-gray-700 text-sm mt-2">
+                      Fasilitas laboratorium yang lengkap dan bimbingan intensif
+                      dari para dosen sangat membantu saya dalam menempuh
+                      pendidikan kedokteran.
+                    </p>
                   </div>
-                  <p class="text-gray-600 text-sm mt-2 flex-grow">
-                    “Fasilitas laboratorium yang lengkap dan bimbingan intensif
-                    dari para dosen sangat membantu saya dalam menempuh
-                    pendidikan kedokteran.”
-                  </p>
                 </div>
               </div>
 
               <div class="card w-[300px] mx-4 flex-shrink-0">
                 <div
-                  class="bg-white rounded-lg shadow-lg p-6 relative h-full flex flex-col"
+                  class="flex flex-col h-full rounded-lg shadow-lg overflow-hidden"
                 >
-                  <div>
+                  <div class="relative h-48">
                     <img
-                      src="https://via.placeholder.com/280x160/DDA0DD/000000?Text=Alumni+UMSU+4"
-                      alt="Alumni 4"
-                      class="w-full h-40 object-cover rounded-t-lg mb-4"
+                      src="assets/images/13.png"
+                      alt="Alumni Dian Sastrowardoyo"
+                      class="absolute inset-0 w-full h-full object-cover"
                     />
-                    <h3 class="font-bold text-lg">Dian Sastrowardoyo</h3>
-                    <p class="text-sm text-gray-500">
-                      Pengacara di Firma Hukum ABC
-                    </p>
-                    <p class="text-xs text-gray-400 mb-4">Fakultas Hukum</p>
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"
+                    ></div>
+                    <div class="absolute bottom-0 left-0 p-4 text-white">
+                      <h3 class="font-bold text-lg">Dian Sastrowardoyo</h3>
+                      <p class="text-sm text-white/90">
+                        Pengacara di Firma Hukum ABC
+                      </p>
+                      <p class="text-xs text-white/70">Fakultas Hukum</p>
+                    </div>
+                  </div>
+                  <div class="bg-white p-6 flex-grow flex flex-col">
                     <span
-                      class="text-5xl text-gray-200 absolute top-0 right-6 font-serif"
+                      class="text-6xl text-blue-400 font-serif leading-none text-center"
                       >”</span
                     >
+                    <p class="text-gray-700 text-sm mt-2">
+                      UMSU memberikan fondasi ilmu hukum yang kuat. Saya bangga
+                      menjadi bagian dari almamater yang hebat ini.
+                    </p>
                   </div>
-                  <p class="text-gray-600 text-sm mt-2 flex-grow">
-                    “UMSU memberikan fondasi ilmu hukum yang kuat. Saya bangga
-                    menjadi bagian dari almamater yang hebat ini.”
-                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const track = document.getElementById("carousel-track");
 
-      <section class="py-16 lg:pt-20 lg:pb-14">
+            if (track) {
+              const cards = Array.from(track.children);
+              cards.forEach((card) => {
+                const clone = card.cloneNode(true);
+                track.appendChild(clone);
+              });
+
+              const cardWidth = 300 + 32; // lebar + margin kanan & kiri
+              const totalWidth = cardWidth * cards.length;
+
+              // Tambahkan kelas animasi
+              track.classList.add("animate-scroll");
+
+              const animationDuration = totalWidth / 40;
+              track.style.animationDuration = `${animationDuration}s`;
+
+              const styleSheet = document.styleSheets[0];
+              const keyframes = `@keyframes scroll {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-${totalWidth}px); }
+                }`;
+
+              // Hapus keyframe 'scroll' yang ada jika sudah ada, lalu tambahkan yang baru
+              for (let i = 0; i < styleSheet.cssRules.length; i++) {
+                let rule = styleSheet.cssRules[i];
+                if (
+                  rule.name === "scroll" &&
+                  rule.type === CSSRule.KEYFRAMES_RULE
+                ) {
+                  styleSheet.deleteRule(i);
+                  break;
+                }
+              }
+              styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+            }
+          });
+        </script>
+      </div>
+
+      <section class="lg:pb-14">
         <div class="container mx-auto px-4 lg:px-8">
           <h2 class="text-3xl lg:text-4xl font-bold text-center text-dark mb-4">
             Akreditasi Program Studi
@@ -1685,13 +1755,15 @@
           >
             <!-- Company Info -->
             <div>
-              <div class="font-bold text-2xl lg:text-[32px]">
-                <img
-                  src="https://admission.umsu.ac.id/images/umsu/logo-admisi.png"
-                  class="w-[180px] h-[45px]"
-                  alt="UMSU Admission Logo"
-                />
-              </div>
+              <a href="index.html">
+                <div class="font-bold text-2xl lg:text-[32px]">
+                  <img
+                    src="https://admission.umsu.ac.id/images/umsu/logo-admisi.png"
+                    class="w-[180px] h-[45px]"
+                    alt="UMSU Admission Logo"
+                  />
+                </div>
+              </a>
               <p class="font-normal text-white text-base">
                 Penerimaan Mahasiswa Baru Universitas Muhammadiyah Sumatera
                 Utara
@@ -1839,21 +1911,21 @@
         </form>
       </div>
     </div>
+    <script>
+      const chatButton = document.getElementById("chatButton");
+      const chatPopup = document.getElementById("chatPopup");
+      const closeChat = document.getElementById("closeChat");
+
+      chatButton.addEventListener("click", () => {
+        chatPopup.classList.toggle("hidden");
+      });
+
+      closeChat.addEventListener("click", () => {
+        chatPopup.classList.add("hidden");
+      });
+
+      initMobileMenu("menu-btn", "mobile-menu");
+      initCountUp();
+    </script>
   </body>
-
-  <script>
-    const chatButton = document.getElementById("chatButton");
-    const chatPopup = document.getElementById("chatPopup");
-    const closeChat = document.getElementById("closeChat");
-
-    chatButton.addEventListener("click", () => {
-      chatPopup.classList.toggle("hidden");
-    });
-
-    closeChat.addEventListener("click", () => {
-      chatPopup.classList.add("hidden");
-    });
-    initMobileMenu("menu-btn", "mobile-menu");
-    initCountUp();
-  </script>
 </html>

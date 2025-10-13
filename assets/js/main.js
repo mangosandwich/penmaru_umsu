@@ -45,11 +45,7 @@ function initMobileMenu(
   const mobileMenu = document.getElementById(menuContainerId);
 
   if (!menuBtn || !mobileMenu) return;
-
-  // Pastikan tertutup di awal
   mobileMenu.classList.add("hidden");
-
-  // Toggle buka/tutup menu saat tombol diklik
   menuBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     mobileMenu.classList.toggle("hidden");
@@ -73,7 +69,6 @@ function initMobileMenu(
     });
   });
 }
-
 
 
 document.addEventListener("DOMContentLoaded", () => {
