@@ -22,6 +22,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.js"></script>
     <script src="assets/css/tailwind.config.js"></script>
     <script src="assets/js/main.js"></script>
+    <style>
+      /* We define the scrolling animation using keyframes.
+         It moves the track from its starting position (0) to a point 
+         where the first set of cards is completely out of view (-100%).
+        */
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(
+            calc(-250px * 4)
+          ); /* Card width * number of cards */
+        }
+      }
+
+      /* Applying the animation to our carousel track */
+      .animate-scroll {
+        animation: scroll 30s linear infinite;
+      }
+
+      /* Pause animation on hover */
+      .carousel-track:hover {
+        animation-play-state: paused;
+      }
+    </style>
   </head>
 
   <body class="font-ibm m-0">
@@ -70,7 +96,7 @@
               <a href="pages/kontak.html" class="nav-link font-normal text-lg"
                 >Kontak</a
               >
-                <a href="pages/faq.html" class="nav-link font-normal text-lg"
+              <a href="pages/faq.html" class="nav-link font-normal text-lg"
                 >FAQ</a
               >
             </div>
@@ -142,7 +168,7 @@
               class="nav-link menu-link block font-normal text-lg hover:text-blue-600"
               >Kontak</a
             >
-             <a
+            <a
               href="pages/kontak.html"
               class="nav-link menu-link block font-normal text-lg hover:text-blue-600"
               >FAQ</a
@@ -562,18 +588,332 @@
               </span>
             </button>
           </div>
-          <h2
-            class="text-3xl lg:text-4xl font-bold text-center text-dark mb-4 pt-8"
-          >
-            Jalur Pendaftaran<span class="text-primary"> UMSU</span>
-          </h2>
-          <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">
-            Pilih jalur pendaftaran fleksibel sesuai kebutuhan Anda. Mudah,
-            cepat, dan pasti!
-          </p>
+          <div class="mb-16">
+            <h2
+              class="text-3xl lg:text-4xl font-bold text-center text-dark mt-16 pt-8 mb-6"
+            >
+              Program Perkuliahan
+            </h2>
+            <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">
+              Pilih program yang paling sesuai dengan kebutuhan dan latar
+              belakang Anda.
+            </p>
 
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div
+                class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col"
+              >
+                <div class="mb-4">
+                  <div
+                    class="flex items-center justify-center w-12 h-12 bg-gray-100 text-gray-600 rounded-full"
+                  >
+                    <i class="fa-solid fa-school"></i>
+                  </div>
+                </div>
+                <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                  Program Reguler
+                </h2>
+                <p class="mb-4 text-sm text-gray-600 flex-grow">
+                  Program perkuliahan utama yang ditawarkan dengan berbagai
+                  pilihan jadwal dan program studi.
+                </p>
+                <a
+                  href="pages/informasi/program-jalur.html"
+                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 mt-auto"
+                  >Lihat Detail
+                  <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i
+                ></a>
+              </div>
+
+              <div
+                class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col"
+              >
+                <div class="mb-4">
+                  <div
+                    class="flex items-center justify-center w-12 h-12 bg-yellow-100 text-yellow-600 rounded-full"
+                  >
+                    <i class="fa-solid fa-sun"></i>
+                  </div>
+                </div>
+                <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                  Reguler A
+                </h2>
+                <p class="mb-4 text-sm text-gray-600 flex-grow">
+                  Jadwal perkuliahan di pagi hingga sore hari, ideal untuk
+                  mahasiswa yang baru lulus SMA/SMK.
+                </p>
+                <a
+                  href="pages/informasi/program-jalur.html"
+                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 mt-auto"
+                  >Lihat Detail
+                  <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i
+                ></a>
+              </div>
+
+              <div
+                class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col"
+              >
+                <div class="mb-4">
+                  <div
+                    class="flex items-center justify-center w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full"
+                  >
+                    <i class="fa-solid fa-moon"></i>
+                  </div>
+                </div>
+                <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                  Reguler B
+                </h2>
+                <p class="mb-4 text-sm text-gray-600 flex-grow">
+                  Jadwal perkuliahan fleksibel di sore/malam hari, cocok untuk
+                  mahasiswa yang sudah bekerja.
+                </p>
+                <a
+                  href="pages/informasi/program-jalur.html"
+                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 mt-auto"
+                  >Lihat Detail
+                  <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i
+                ></a>
+              </div>
+
+              <div
+                class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col"
+              >
+                <div class="mb-4">
+                  <div
+                    class="flex items-center justify-center w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full"
+                  >
+                    <i class="fa-solid fa-book-quran"></i>
+                  </div>
+                </div>
+                <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                  Ma'had Abu Ubaidah
+                </h2>
+                <p class="mb-4 text-sm text-gray-600 flex-grow">
+                  Program integrasi kuliah dengan pendidikan intensif Al-Islam
+                  dan Bahasa Arab di asrama.
+                </p>
+                <a
+                  href="pages/informasi/program-jalur.html"
+                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 mt-auto"
+                  >Lihat Detail
+                  <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i
+                ></a>
+              </div>
+
+              <div
+                class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col"
+              >
+                <div class="mb-4">
+                  <div
+                    class="flex items-center justify-center w-12 h-12 bg-teal-100 text-teal-600 rounded-full"
+                  >
+                    <i class="fa-solid fa-globe"></i>
+                  </div>
+                </div>
+                <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                  Kelas Internasional
+                </h2>
+                <p class="mb-4 text-sm text-gray-600 flex-grow">
+                  Program studi berkurikulum global dengan bahasa Inggris
+                  sebagai pengantar utama.
+                </p>
+                <a
+                  href="pages/informasi/program-jalur.html"
+                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 mt-auto"
+                  >Lihat Detail
+                  <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i
+                ></a>
+              </div>
+
+              <div
+                class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col"
+              >
+                <div class="mb-4">
+                  <div
+                    class="flex items-center justify-center w-12 h-12 bg-orange-100 text-orange-600 rounded-full"
+                  >
+                    <i class="fa-solid fa-right-left"></i>
+                  </div>
+                </div>
+                <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                  Transfer / Pindahan
+                </h2>
+                <p class="mb-4 text-sm text-gray-600 flex-grow">
+                  Jalur khusus bagi mahasiswa pindahan dari perguruan tinggi
+                  lain yang ingin melanjutkan studi.
+                </p>
+                <a
+                  href="pages/informasi/program-jalur.html"
+                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 mt-auto"
+                  >Lihat Detail
+                  <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i
+                ></a>
+              </div>
+
+              <div
+                class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col"
+              >
+                <div class="mb-4">
+                  <div
+                    class="flex items-center justify-center w-12 h-12 bg-purple-100 text-purple-600 rounded-full"
+                  >
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+                </div>
+                <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                  Kelas Eksekutif
+                </h2>
+                <p class="mb-4 text-sm text-gray-600 flex-grow">
+                  Dirancang untuk para profesional dengan jadwal fleksibel dan
+                  materi relevan dunia kerja.
+                </p>
+                <a
+                  href="pages/informasi/program-jalur.html"
+                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 mt-auto"
+                  >Lihat Detail
+                  <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i
+                ></a>
+              </div>
+
+              <div
+                class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col"
+              >
+                <div class="mb-4">
+                  <div
+                    class="flex items-center justify-center w-12 h-12 bg-sky-100 text-sky-600 rounded-full"
+                  >
+                    <i class="fa-solid fa-calendar-day"></i>
+                  </div>
+                </div>
+                <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                  Reguler A (Genap)
+                </h2>
+                <p class="mb-4 text-sm text-gray-600 flex-grow">
+                  Program kelas pagi yang pendaftarannya dibuka untuk
+                  perkuliahan awal di semester Genap.
+                </p>
+                <a
+                  href="pages/informasi/program-jalur.html"
+                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 mt-auto"
+                  >Lihat Detail
+                  <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i
+                ></a>
+              </div>
+
+              <div
+                class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col"
+              >
+                <div class="mb-4">
+                  <div
+                    class="flex items-center justify-center w-12 h-12 bg-slate-100 text-slate-600 rounded-full"
+                  >
+                    <i class="fa-solid fa-calendar-week"></i>
+                  </div>
+                </div>
+                <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                  Reguler B (Genap)
+                </h2>
+                <p class="mb-4 text-sm text-gray-600 flex-grow">
+                  Program kelas sore/malam yang pendaftarannya dibuka untuk
+                  perkuliahan awal di semester Genap.
+                </p>
+                <a
+                  href="pages/informasi/program-jalur.html"
+                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 mt-auto"
+                  >Lihat Detail
+                  <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i
+                ></a>
+              </div>
+
+              <div
+                class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col"
+              >
+                <div class="mb-4">
+                  <div
+                    class="flex items-center justify-center w-12 h-12 bg-cyan-100 text-cyan-600 rounded-full"
+                  >
+                    <i class="fa-solid fa-calendar-plus"></i>
+                  </div>
+                </div>
+                <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                  Eksekutif (Genap)
+                </h2>
+                <p class="mb-4 text-sm text-gray-600 flex-grow">
+                  Program kelas eksekutif yang pendaftarannya dibuka untuk
+                  perkuliahan awal di semester Genap.
+                </p>
+                <a
+                  href="pages/informasi/program-jalur.html"
+                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 mt-auto"
+                  >Lihat Detail
+                  <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i
+                ></a>
+              </div>
+
+              <div
+                class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col"
+              >
+                <div class="mb-4">
+                  <div
+                    class="flex items-center justify-center w-12 h-12 bg-pink-100 text-pink-600 rounded-full"
+                  >
+                    <i class="fa-solid fa-award"></i>
+                  </div>
+                </div>
+                <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                  RPL Tipe A1
+                </h2>
+                <p class="mb-4 text-sm text-gray-600 flex-grow">
+                  Rekognisi Pembelajaran Lampau bagi lulusan D3 yang ingin
+                  melanjutkan studi ke jenjang S1.
+                </p>
+                <a
+                  href="pages/informasi/program-jalur.html"
+                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 mt-auto"
+                  >Lihat Detail
+                  <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i
+                ></a>
+              </div>
+
+              <div
+                class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col"
+              >
+                <div class="mb-4">
+                  <div
+                    class="flex items-center justify-center w-12 h-12 bg-amber-100 text-amber-600 rounded-full"
+                  >
+                    <i class="fa-solid fa-briefcase"></i>
+                  </div>
+                </div>
+                <h2 class="mb-2 text-xl font-semibold text-gray-800">
+                  RPL Tipe A2
+                </h2>
+                <p class="mb-4 text-sm text-gray-600 flex-grow">
+                  Pengakuan SKS dari pengalaman kerja, pelatihan, atau
+                  pendidikan non-formal untuk melanjutkan studi.
+                </p>
+                <a
+                  href="pages/informasi/program-jalur.html"
+                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 mt-auto"
+                  >Lihat Detail
+                  <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i
+                ></a>
+              </div>
+            </div>
+          </div>
           <div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <h2
+              class="text-3xl lg:text-4xl font-bold text-center text-dark mt-16 pt-8 mb-6"
+            >
+              Jalur Pendaftaran
+            </h2>
+            <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">
+              Temukan jalur seleksi yang paling cocok untuk Anda.
+            </p>
+
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center"
+            >
               <div
                 class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col"
               >
@@ -593,7 +933,7 @@
                 </p>
                 <a
                   href="pages/informasi/program-jalur.html"
-                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200"
+                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 mt-auto"
                 >
                   Lihat Detail
                   <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i>
@@ -619,7 +959,7 @@
                 </p>
                 <a
                   href="pages/informasi/program-jalur.html"
-                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200"
+                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 mt-auto"
                 >
                   Lihat Detail
                   <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i>
@@ -645,7 +985,7 @@
                 </p>
                 <a
                   href="pages/informasi/program-jalur.html"
-                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200"
+                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 mt-auto"
                 >
                   Lihat Detail
                   <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i>
@@ -666,12 +1006,12 @@
                   Jalur Beasiswa (BSW)
                 </h2>
                 <p class="mb-4 text-sm text-gray-600 flex-grow">
-                  Program bantuan biaya pendidikan bagi mahasiswa berprestasi
-                  atau yang memenuhi kriteria ekonomi.
+                  Pendaftaran melalui salah satu program beasiswa yang tersedia,
+                  baik dari internal universitas maupun mitra eksternal.
                 </p>
                 <a
                   href="pages/informasi/program-jalur.html"
-                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200"
+                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 mt-auto"
                 >
                   Lihat Detail
                   <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i>
@@ -697,7 +1037,7 @@
                 </p>
                 <a
                   href="pages/informasi/program-jalur.html"
-                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200"
+                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 mt-auto"
                 >
                   Lihat Detail
                   <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i>
@@ -718,62 +1058,12 @@
                   Jalur Internasional (INT)
                 </h2>
                 <p class="mb-4 text-sm text-gray-600 flex-grow">
-                  Program studi dengan kurikulum global yang menggunakan bahasa
-                  Inggris sebagai bahasa pengantar.
+                  Proses seleksi khusus untuk program kelas internasional,
+                  mencakup tes kemampuan Bahasa Inggris.
                 </p>
                 <a
                   href="pages/informasi/program-jalur.html"
-                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200"
-                >
-                  Lihat Detail
-                  <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i>
-                </a>
-              </div>
-              <div
-                class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col"
-              >
-                <div class="mb-4">
-                  <div
-                    class="flex items-center justify-center w-12 h-12 bg-pink-100 text-pink-600 rounded-full"
-                  >
-                    <i class="fa-solid fa-award"></i>
-                  </div>
-                </div>
-                <h2 class="mb-2 text-xl font-semibold text-gray-800">
-                  Program RPL (Rekognisi Pembelajaran Lampau)
-                </h2>
-                <p class="mb-4 text-sm text-gray-600 flex-grow">
-                  Lanjutkan kuliah dengan mengakui pengalaman kerja Anda sebagai
-                  SKS.
-                </p>
-                <a
-                  href="pages/informasi/program-jalur.html"
-                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200"
-                >
-                  Lihat Detail
-                  <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i>
-                </a>
-              </div>
-              <div
-                class="p-6 bg-white rounded-lg border-gray-200 border-2 hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col"
-              >
-                <div class="mb-4">
-                  <div
-                    class="flex items-center justify-center w-12 h-12 bg-gray-100 text-gray-600 rounded-full"
-                  >
-                    <i class="fa-solid fa-compass"></i>
-                  </div>
-                </div>
-                <h2 class="mb-2 text-xl font-semibold text-gray-800">
-                  Program dan Jalur Lainnya
-                </h2>
-                <p class="mb-4 text-sm text-gray-600 flex-grow">
-                  Temukan berbagai program dan jalur pendaftaran lain yang
-                  sesuai dengan minat serta kualifikasi Anda.
-                </p>
-                <a
-                  href="pages/informasi/program-jalur.html"
-                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200"
+                  class="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-600 transition-colors duration-200 mt-auto"
                 >
                   Lihat Detail
                   <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i>
@@ -991,6 +1281,139 @@
                 Lihat Detail
                 <i class="fa-solid fa-arrow-right w-4 h-4 ml-1"></i>
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-gray-50 flex items-center justify-center min-h-screen">
+        <div class="w-full max-w-6xl mx-auto">
+          <h2
+            class="text-3xl lg:text-4xl font-bold text-center text-dark mb-6"
+          >
+            Apa Kata Mereka
+          </h2>
+          <p class="text-center text-gray-700 max-w-2xl mx-auto mb-12">
+            Lebih dari puluhan ribu alumni UMSU memiliki pengalaman perkuliahan
+            menarik yang membantu mereka memberikan kontribusi untuk Indonesia.
+          </p>
+
+          <div class="carousel-container relative w-full overflow-hidden">
+            <div id="carousel-track" class="flex w-max">
+              <div class="card w-[300px] mx-4 flex-shrink-0">
+                <div
+                  class="bg-white rounded-lg shadow-lg p-6 relative h-full flex flex-col"
+                >
+                  <div>
+                    <img
+                      src="https://via.placeholder.com/280x160/FFC0CB/000000?Text=Alumni+UMSU+1"
+                      alt="Alumni 1"
+                      class="w-full h-40 object-cover rounded-t-lg mb-4"
+                    />
+                    <h3 class="font-bold text-lg">Aulia Rahman</h3>
+                    <p class="text-sm text-gray-500">
+                      Digital Marketer at Gojek
+                    </p>
+                    <p class="text-xs text-gray-400 mb-4">
+                      Fakultas Ekonomi dan Bisnis
+                    </p>
+                    <span
+                      class="text-5xl text-gray-200 absolute top-0 right-6 font-serif"
+                      >”</span
+                    >
+                  </div>
+                  <p class="text-gray-600 text-sm mt-2 flex-grow">
+                    “Di UMSU, saya tidak hanya belajar teori, tapi juga didorong
+                    untuk aktif berorganisasi. Pengalaman ini sangat berharga
+                    dan membentuk saya di dunia kerja.”
+                  </p>
+                </div>
+              </div>
+
+              <div class="card w-[300px] mx-4 flex-shrink-0">
+                <div
+                  class="bg-white rounded-lg shadow-lg p-6 relative h-full flex flex-col"
+                >
+                  <div>
+                    <img
+                      src="https://via.placeholder.com/280x160/87CEEB/000000?Text=Alumni+UMSU+2"
+                      alt="Alumni 2"
+                      class="w-full h-40 object-cover rounded-t-lg mb-4"
+                    />
+                    <h3 class="font-bold text-lg">Bunga Lestari</h3>
+                    <p class="text-sm text-gray-500">
+                      UI/UX Designer at Tokopedia
+                    </p>
+                    <p class="text-xs text-gray-400 mb-4">Fakultas Teknik</p>
+                    <span
+                      class="text-5xl text-gray-200 absolute top-0 right-6 font-serif"
+                      >”</span
+                    >
+                  </div>
+                  <p class="text-gray-600 text-sm mt-2 flex-grow">
+                    “Kurikulum yang relevan dengan industri dan dosen yang ahli
+                    di bidangnya membuat saya siap bersaing. UMSU adalah tempat
+                    terbaik untuk berkembang.”
+                  </p>
+                </div>
+              </div>
+
+              <div class="card w-[300px] mx-4 flex-shrink-0">
+                <div
+                  class="bg-white rounded-lg shadow-lg p-6 relative h-full flex flex-col"
+                >
+                  <div>
+                    <img
+                      src="https://via.placeholder.com/280x160/98FB98/000000?Text=Alumni+UMSU+3"
+                      alt="Alumni 3"
+                      class="w-full h-40 object-cover rounded-t-lg mb-4"
+                    />
+                    <h3 class="font-bold text-lg">Chandra Wijaya</h3>
+                    <p class="text-sm text-gray-500">
+                      Dokter di RSUP H. Adam Malik
+                    </p>
+                    <p class="text-xs text-gray-400 mb-4">
+                      Fakultas Kedokteran
+                    </p>
+                    <span
+                      class="text-5xl text-gray-200 absolute top-0 right-6 font-serif"
+                      >”</span
+                    >
+                  </div>
+                  <p class="text-gray-600 text-sm mt-2 flex-grow">
+                    “Fasilitas laboratorium yang lengkap dan bimbingan intensif
+                    dari para dosen sangat membantu saya dalam menempuh
+                    pendidikan kedokteran.”
+                  </p>
+                </div>
+              </div>
+
+              <div class="card w-[300px] mx-4 flex-shrink-0">
+                <div
+                  class="bg-white rounded-lg shadow-lg p-6 relative h-full flex flex-col"
+                >
+                  <div>
+                    <img
+                      src="https://via.placeholder.com/280x160/DDA0DD/000000?Text=Alumni+UMSU+4"
+                      alt="Alumni 4"
+                      class="w-full h-40 object-cover rounded-t-lg mb-4"
+                    />
+                    <h3 class="font-bold text-lg">Dian Sastrowardoyo</h3>
+                    <p class="text-sm text-gray-500">
+                      Pengacara di Firma Hukum ABC
+                    </p>
+                    <p class="text-xs text-gray-400 mb-4">Fakultas Hukum</p>
+                    <span
+                      class="text-5xl text-gray-200 absolute top-0 right-6 font-serif"
+                      >”</span
+                    >
+                  </div>
+                  <p class="text-gray-600 text-sm mt-2 flex-grow">
+                    “UMSU memberikan fondasi ilmu hukum yang kuat. Saya bangga
+                    menjadi bagian dari almamater yang hebat ini.”
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1361,57 +1784,75 @@
       </footer>
     </div>
     <!-- Floating Chat Button -->
-<div class="fixed bottom-6 right-6 z-50">
-  <!-- Tombol chat -->
-  <button id="chatButton"
-    class="bg-blue-600 hover:bg-blue-700 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition">
-    <i class="fa-solid fa-comment-dots text-2xl"></i>
-  </button>
-
-  <!-- Popup chat -->
-  <div id="chatPopup"
-    class="hidden absolute bottom-20 right-0 w-80 bg-white border border-gray-200 rounded-xl shadow-lg p-4">
-    <div class="flex justify-between items-center mb-3">
-      <h3 class="font-semibold text-gray-800 text-lg">Kirim Pesan</h3>
-      <button id="closeChat" class="text-gray-400 hover:text-gray-600">
-        <i class="fa-solid fa-xmark"></i>
+    <div class="fixed bottom-6 right-6 z-50">
+      <!-- Tombol chat -->
+      <button
+        id="chatButton"
+        class="bg-blue-600 hover:bg-blue-700 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition"
+      >
+        <i class="fa-solid fa-comment-dots text-2xl"></i>
       </button>
+
+      <!-- Popup chat -->
+      <div
+        id="chatPopup"
+        class="hidden absolute bottom-20 right-0 w-80 bg-white border border-gray-200 rounded-xl shadow-lg p-4"
+      >
+        <div class="flex justify-between items-center mb-3">
+          <h3 class="font-semibold text-gray-800 text-lg">Kirim Pesan</h3>
+          <button id="closeChat" class="text-gray-400 hover:text-gray-600">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <form>
+          <div class="mb-3">
+            <label for="subject" class="block text-sm text-gray-600 mb-1"
+              >Subjek</label
+            >
+            <input
+              type="text"
+              id="subject"
+              placeholder="Tuliskan subjek"
+              class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="block text-sm text-gray-600 mb-1"
+              >Pesan</label
+            >
+            <textarea
+              id="message"
+              rows="3"
+              placeholder="Tuliskan pesan Anda"
+              class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            ></textarea>
+          </div>
+
+          <button
+            type="button"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition"
+          >
+            <i class="fa-solid fa-paper-plane mr-2"></i> Kirim
+          </button>
+        </form>
+      </div>
     </div>
-
-    <form>
-      <div class="mb-3">
-        <label for="subject" class="block text-sm text-gray-600 mb-1">Subjek</label>
-        <input type="text" id="subject" placeholder="Tuliskan subjek"
-          class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none" />
-      </div>
-
-      <div class="mb-3">
-        <label for="message" class="block text-sm text-gray-600 mb-1">Pesan</label>
-        <textarea id="message" rows="3" placeholder="Tuliskan pesan Anda"
-          class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
-      </div>
-
-      <button type="button"
-        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition">
-        <i class="fa-solid fa-paper-plane mr-2"></i> Kirim
-      </button>
-    </form>
-  </div>
-</div>
   </body>
 
   <script>
     const chatButton = document.getElementById("chatButton");
-  const chatPopup = document.getElementById("chatPopup");
-  const closeChat = document.getElementById("closeChat");
+    const chatPopup = document.getElementById("chatPopup");
+    const closeChat = document.getElementById("closeChat");
 
-  chatButton.addEventListener("click", () => {
-    chatPopup.classList.toggle("hidden");
-  });
+    chatButton.addEventListener("click", () => {
+      chatPopup.classList.toggle("hidden");
+    });
 
-  closeChat.addEventListener("click", () => {
-    chatPopup.classList.add("hidden");
-  });
+    closeChat.addEventListener("click", () => {
+      chatPopup.classList.add("hidden");
+    });
     initMobileMenu("menu-btn", "mobile-menu");
     initCountUp();
   </script>
