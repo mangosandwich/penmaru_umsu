@@ -70,13 +70,54 @@ function initMobileMenu(
   });
 }
 
+// carousel
+function initCarousel(carouselId) {
+  const track = document.getElementById(carouselId);
+
+  if (!track) return; 
+
+  const cards = Array.from(track.children);
+
+  // Gandakan card agar animasi looping lancar
+  cards.forEach((card) => {
+    const clone = card.cloneNode(true);
+    track.appendChild(clone);
+  });
+
+  const cardWidth = 300 + 32; 
+  const totalWidth = cardWidth * cards.length;
+
+  track.classList.add("animate-scroll");
+
+  const animationDuration = totalWidth / 40;
+  track.style.animationDuration = `${animationDuration}s`;
+
+
+  let styleEl = document.createElement("style");
+  document.head.appendChild(styleEl);
+  let styleSheet = styleEl.sheet;
+
+  styleSheet.insertRule(`
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-${totalWidth}px); }
+    }
+  `, 0);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementById("carousel-track")) {
+    initCarousel("carousel-track");
+  }
+});
+
 
 document.addEventListener("DOMContentLoaded", () => {
-  const currentPage = window.location.pathname.split("/").pop(); // Ambil nama file HTML aktif
+  const currentPage = window.location.pathname.split("/").pop();
   const navLinks = document.querySelectorAll(".nav-link");
 
   navLinks.forEach((link) => {
-    const linkPage = link.getAttribute("href").split("/").pop(); // Nama file dari href
+    const linkPage = link.getAttribute("href").split("/").pop(); 
     if (
       linkPage === currentPage ||
       (linkPage === "" && currentPage === "index.html")
