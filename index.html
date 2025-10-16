@@ -329,7 +329,9 @@
         </section>
       </section>
 
+      
       <!-- Program Studi -->
+       <div class="bg-gray-50">
       <section class="py-16 lg:pt-24 lg:pb-14">
         <div class="container mx-auto px-4 lg:px-8">
           <h2 class="text-3xl lg:text-4xl font-bold text-center text-dark mb-4">
@@ -467,7 +469,7 @@
       </section>
 
       <!-- Why Choose Us Section -->
-      <section class="pb-8 pt-4 bg-gray-50">
+      <section class="pb-8 pt-4">
         <div class="container mx-auto px-4 lg:px-8">
           <div
             id="default-carousel"
@@ -784,7 +786,7 @@
               >
                 <div class="mb-4">
                   <div
-                    class="flex items-center justify-center w-12 h-12 bg-gray-100 text-gray-600 rounded-full"
+                    class="flex items-center justify-center w-12 h-12 bg-red-100 text-red-600 rounded-full"
                   >
                     <i class="fa-solid fa-school"></i>
                   </div>
@@ -1238,9 +1240,9 @@
         </div>
       </section>
 
-      <section>
-        <div class="bg-gray-50 flex items-center justify-center min-h-screen">
-          <div class="w-full max-w-6xl mx-auto">
+      <section class="py-6">
+        <div class="bg-blue-50 flex items-center justify-center">
+          <div class="w-full max-w-6xl mx-auto py-10">
             <h2
               class="text-3xl lg:text-4xl font-bold text-center text-dark mb-6"
             >
@@ -1398,50 +1400,10 @@
               </div>
             </div>
           </div>
-          <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              const track = document.getElementById("carousel-track");
-
-              if (track) {
-                const cards = Array.from(track.children);
-                cards.forEach((card) => {
-                  const clone = card.cloneNode(true);
-                  track.appendChild(clone);
-                });
-
-                const cardWidth = 300 + 32; // lebar + margin kanan & kiri
-                const totalWidth = cardWidth * cards.length;
-
-                // Tambahkan kelas animasi
-                track.classList.add("animate-scroll");
-
-                const animationDuration = totalWidth / 40;
-                track.style.animationDuration = `${animationDuration}s`;
-
-                const styleSheet = document.styleSheets[0];
-                const keyframes = `@keyframes scroll {
-                    0% { transform: translateX(0); }
-                    100% { transform: translateX(-${totalWidth}px); }
-                }`;
-
-                for (let i = 0; i < styleSheet.cssRules.length; i++) {
-                  let rule = styleSheet.cssRules[i];
-                  if (
-                    rule.name === "scroll" &&
-                    rule.type === CSSRule.KEYFRAMES_RULE
-                  ) {
-                    styleSheet.deleteRule(i);
-                    break;
-                  }
-                }
-                styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
-              }
-            });
-          </script>
         </div>
       </section>
 
-      <section class="lg:pb-14">
+      <section class="py-14">
         <div class="container mx-auto px-4 lg:px-8">
           <h2 class="text-3xl lg:text-4xl font-bold text-center text-dark mb-4">
             Akreditasi Program Studi
@@ -1698,7 +1660,7 @@
           </div>
         </div>
       </section>
-
+</div>
       <!-- Footer -->
       <footer class="bg-blue-700 py-16">
         <div class="container mx-auto px-4 lg:px-8">
@@ -1885,7 +1847,6 @@
 
       initCarousel("carousel-track");
       initMobileMenu("menu-btn", "mobile-menu");
-      adjustGridCenter("jalur-grid");
       initCountUp();
     </script>
   </body>

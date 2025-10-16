@@ -16,244 +16,293 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.js"></script>
   </head>
 
-  <body class="bg-blue-100 font-[IBM Plex Sans]">
-    <div class="min-h-screen flex items-center justify-center p-4">
+  <body
+    class="relative bg-gradient-to-b from-blue-400/60 via-blue-600/30 font-[IBM Plex Sans] min-h-screen"
+  >
+    <div class="min-h-screen flex items-center justify-center p-4 sm:p-8">
       <div
-        class="flex flex-col md:flex-row bg-white rounded-2xl shadow-xl max-w-8xl h-[75vh] w-full overflow-hidden"
+        class="flex flex-col bg-white rounded-2xl shadow-xl w-full max-w-6xl overflow-hidden"
       >
-        <!-- Gambar -->
-        <div
-          class="hidden md:flex md:w-1/2 bg-cover bg-center rounded-l-2xl"
-          style="background-image: url('../../assets/images/crowded.JPG')"
-        ></div>
-
         <!-- Form -->
-        <div
-          class="p-8 md:w-1/2 bg-white :bg-gray-800 rounded-2xl border border-gray-200 :border-gray-700 shadow-md w-full max-w-4xl mx-auto"
-        >
-          <h2
-            class="text-2xl font-bold text-gray-800 :text-white mb-1 text-center"
-          >
+        <div class="p-8 w-full">
+          <h2 class="text-2xl font-bold text-gray-800 mb-1 text-center">
             Daftar
           </h2>
-          <p class="text-gray-600 :text-gray-400 mb-4 text-center">
+          <p class="text-gray-600 mb-6 text-center">
             Masukkan Rincian Pribadi Anda dan Mulailah Perjalanan Bersama Kami.
           </p>
 
-          <!-- Scrollable Form -->
-          <form class="max-h-[500px] overflow-y-auto pr-2 space-y-6">
-            <div class="p-2 space-y-8">
-              <!-- Jalur Masuk -->
-              <div>
-                <label class="sr-only">Jalur Masuk</label>
-                <select
-                  class="w-full px-4 py-3 border border-gray-300 :border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500 bg-gray-50 :bg-gray-700 text-gray-900 :text-white placeholder-gray-400 :placeholder-gray-300"
-                  required
-                >
-                  <option>Pilih Jalur Masuk</option>
-                  <option>Reguler</option>
-                  <option>Prestasi</option>
-                  <option>Beasiswa</option>
-                </select>
-              </div>
-
-              <!-- Identitas Diri -->
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  placeholder="Nama Lengkap (Sesuai Ijazah)"
-                  class="w-full px-4 py-3 border border-gray-300 :border-gray-600 rounded-lg bg-gray-50 :bg-gray-700 text-gray-900 :text-white placeholder-gray-400 :placeholder-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="Tempat Lahir"
-                  class="w-full px-4 py-3 border border-gray-300 :border-gray-600 rounded-lg bg-gray-50 :bg-gray-700 text-gray-900 :text-white placeholder-gray-400 :placeholder-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                  required
-                />
-              </div>
-
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input
-                  type="date"
-                  class="w-full px-4 py-3 border border-gray-300 :border-gray-600 rounded-lg bg-gray-50 :bg-gray-700 text-gray-900 :text-white focus:ring-blue-500 focus:border-blue-500"
-                />
-                <input
-                  type="text"
-                  placeholder="Nama Ibu Kandung"
-                  class="w-full px-4 py-3 border border-gray-300 :border-gray-600 rounded-lg bg-gray-50 :bg-gray-700 text-gray-900 :text-white placeholder-gray-400 :placeholder-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-
-              <!-- Kontak -->
-              <input
-                type="email"
-                placeholder="Email Yang Valid"
-                class="w-full px-4 py-3 border border-gray-300 :border-gray-600 rounded-lg bg-gray-50 :bg-gray-700 text-gray-900 :text-white placeholder-gray-400 :placeholder-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                required
-              />
-
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  placeholder="No. Handphone Aktif"
-                  class="w-full px-4 py-3 border border-gray-300 :border-gray-600 rounded-lg bg-gray-50 :bg-gray-700 text-gray-900 :text-white placeholder-gray-400 :placeholder-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                />
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Nomor WhatsApp"
-                    class="w-full px-4 py-3 border border-gray-300 :border-gray-600 rounded-lg bg-gray-50 :bg-gray-700 text-gray-900 :text-white placeholder-gray-400 :placeholder-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                  />
-                  <label
-                    class="mt-2 flex items-center text-sm text-gray-600 :text-gray-400"
-                  >
+          <form class="h-full overflow-hidden bg-gray-50 p-6 rounded-lg border">
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 items-start"
+            >
+              <div class="flex flex-col gap-y-6">
+                <div class="space-y-4">
+                  <div>
+                    <label
+                      for="jalur-masuk"
+                      class="block mb-1.5 text-sm font-medium text-gray-700"
+                      >Jalur Masuk</label
+                    >
+                    <select
+                      id="jalur-masuk"
+                      class="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500"
+                      required
+                    >
+                      <option>Pilih Jalur</option>
+                      <option>Reguler</option>
+                      <option>Prestasi</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      for="nama-lengkap"
+                      class="block mb-1.5 text-sm font-medium text-gray-700"
+                      >Nama Lengkap</label
+                    >
                     <input
-                      type="checkbox"
-                      class="h-4 w-4 text-blue-600 border-gray-300 :border-gray-600 rounded focus:ring-blue-500"
+                      type="text"
+                      id="nama-lengkap"
+                      class="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-white"
+                      required
                     />
-                    <span class="ml-2">Centang Jika Sama Dengan No. HP</span>
+                  </div>
+                  <div class="grid grid-cols-2 gap-4">
+                    <div>
+                      <label
+                        for="tempat-lahir"
+                        class="block mb-1.5 text-sm font-medium text-gray-700"
+                        >Tempat Lahir</label
+                      >
+                      <input
+                        type="text"
+                        id="tempat-lahir"
+                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-white"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="tanggal-lahir"
+                        class="block mb-1.5 text-sm font-medium text-gray-700"
+                        >Tanggal Lahir</label
+                      >
+                      <input
+                        type="date"
+                        id="tanggal-lahir"
+                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-white text-gray-600"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="nama-ibu"
+                      class="block mb-1.5 text-sm font-medium text-gray-700"
+                      >Nama Ibu Kandung</label
+                    >
+                    <input
+                      type="text"
+                      id="nama-ibu"
+                      class="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-white"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <div class="space-y-4">
+                      <div>
+                        <label
+                          for="email"
+                          class="block mb-1 text-sm font-medium text-gray-700"
+                          >Email Aktif</label
+                        >
+                        <input
+                          type="email"
+                          id="email"
+                          placeholder="contoh@email.com"
+                          class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
+                          required
+                        />
+                      </div>
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                          <label
+                            for="no-hp"
+                            class="block mb-1 text-sm font-medium text-gray-700"
+                            >No. Handphone</label
+                          >
+                          <input
+                            type="text"
+                            id="no-hp"
+                            placeholder="0812xxxxxxxx"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
+                          />
+                        </div>
+                        <div>
+                          <label
+                            for="no-wa"
+                            class="block mb-1 text-sm font-medium text-gray-700"
+                            >No. WhatsApp</label
+                          >
+                          <input
+                            type="text"
+                            id="no-wa"
+                            placeholder="0812xxxxxxxx"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-y-6">
+                <div class="space-y-4">
+                  <div class="p-3 border rounded-lg bg-white">
+                    <p class="mb-2 text-sm font-bold text-gray-700">
+                      Pilihan 1
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                      <select
+                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg"
+                      >
+                        <option>Pilih Prodi</option>
+                      </select>
+                      <select
+                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg"
+                      >
+                        <option>Pilih Waktu</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="p-3 border rounded-lg bg-white">
+                    <p class="mb-2 text-sm font-bold text-gray-700">
+                      Pilihan 2
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                      <select
+                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg"
+                      >
+                        <option>Pilih Prodi</option>
+                      </select>
+                      <select
+                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg"
+                      >
+                        <option>Pilih Waktu</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="p-3 border rounded-lg bg-white">
+                    <p class="mb-2 text-sm font-bold text-gray-700">
+                      Pilihan 3
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                      <select
+                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg"
+                      >
+                        <option>Pilih Prodi</option>
+                      </select>
+                      <select
+                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg"
+                      >
+                        <option>Pilih Waktu</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="grid grid-cols-2 gap-4">
+                    <div>
+                      <label
+                        for="password"
+                        class="block mb-1.5 text-sm font-medium text-gray-700"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        id="password"
+                        placeholder="Min. 10 karakter"
+                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-white"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="confirm-password"
+                        class="block mb-1.5 text-sm font-medium text-gray-700"
+                        >Konfirmasi Password</label
+                      >
+                      <input
+                        type="password"
+                        id="confirm-password"
+                        placeholder="Ulangi password"
+                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg bg-white"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <label
+                    for="captcha"
+                    class="block mb-1.5 text-sm font-medium text-gray-700"
+                    >Verifikasi Keamanan</label
+                  >
+                  <div class="flex gap-4">
+                    <div
+                      class="w-32 h-10 bg-gray-300 rounded-lg flex items-center justify-center text-gray-500 italic"
+                    >
+                      Captcha
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        id="captcha"
+                        placeholder="Masukkan kode"
+                        class="w-full max-w-xs px-4 py-2.5 border border-gray-300 rounded-lg bg-white"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="md:col-span-2">
+                <div class="flex items-start">
+                  <input
+                    id="agreement"
+                    type="checkbox"
+                    class="h-4 w-4 mt-0.5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                  />
+                  <label for="agreement" class="ml-3 text-sm text-gray-700">
+                    Saya menyatakan bahwa data yang saya isikan adalah benar dan
+                    saya setuju dengan
+                    <a
+                      href="#"
+                      class="font-medium text-blue-600 hover:underline"
+                      >Ketentuan Penggunaan</a
+                    >.
                   </label>
                 </div>
               </div>
-
-              <!-- Pilihan 1 -->
-              <div class="space-y-2">
-                <h3 class="font-semibold text-gray-800 :text-white">
-                  Pilihan 1
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <select
-                    class="w-full px-4 py-3 border border-gray-300 :border-gray-600 rounded-lg bg-gray-50 :bg-gray-700 text-gray-900 :text-white focus:ring-blue-500 focus:border-blue-500"
-                  >
-                    <option>Pilih Program Studi</option>
-                    <option>Kedokteran</option>
-                    <option>Farmasi</option>
-                  </select>
-                  <select
-                    class="w-full px-4 py-3 border border-gray-300 :border-gray-600 rounded-lg bg-gray-50 :bg-gray-700 text-gray-900 :text-white focus:ring-blue-500 focus:border-blue-500"
-                  >
-                    <option>Pilih Waktu Kuliah</option>
-                    <option>Pagi</option>
-                    <option>Sore</option>
-                  </select>
-                </div>
-              </div>
-
-              <!-- Pilihan 2 -->
-              <div class="space-y-2">
-                <h3 class="font-semibold text-gray-800 :text-white">
-                  Pilihan 2
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <select
-                    class="w-full px-4 py-3 border border-gray-300 :border-gray-600 rounded-lg bg-gray-50 :bg-gray-700 text-gray-900 :text-white focus:ring-blue-500 focus:border-blue-500"
-                  >
-                    <option>Pilih Program Studi</option>
-                    <option>Manajemen</option>
-                    <option>Hukum</option>
-                  </select>
-                  <select
-                    class="w-full px-4 py-3 border border-gray-300 :border-gray-600 rounded-lg bg-gray-50 :bg-gray-700 text-gray-900 :text-white focus:ring-blue-500 focus:border-blue-500"
-                  >
-                    <option>Pilih Waktu Kuliah</option>
-                    <option>Pagi</option>
-                    <option>Sore</option>
-                  </select>
-                </div>
-              </div>
-
-              <!-- Pilihan 3 -->
-              <div class="space-y-2">
-                <h3 class="font-semibold text-gray-800 :text-white">
-                  Pilihan 3
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <select
-                    class="w-full px-4 py-3 border border-gray-300 :border-gray-600 rounded-lg bg-gray-50 :bg-gray-700 text-gray-900 :text-white focus:ring-blue-500 focus:border-blue-500"
-                  >
-                    <option>Pilih Program Studi</option>
-                    <option>Akuntansi</option>
-                    <option>Teknik Informatika</option>
-                  </select>
-                  <select
-                    class="w-full px-4 py-3 border border-gray-300 :border-gray-600 rounded-lg bg-gray-50 :bg-gray-700 text-gray-900 :text-white focus:ring-blue-500 focus:border-blue-500"
-                  >
-                    <option>Pilih Waktu Kuliah</option>
-                    <option>Pagi</option>
-                    <option>Sore</option>
-                  </select>
-                </div>
-              </div>
-
-              <!-- Credentials -->
-              <div class="pt-4 border-t border-gray-200 :border-gray-700">
-                <h3 class="font-semibold text-gray-800 :text-white mb-2">
-                  Credentials
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <input
-                    type="password"
-                    placeholder="Password (min 10 karakter)"
-                    class="w-full px-4 py-3 border border-gray-300 :border-gray-600 rounded-lg bg-gray-50 :bg-gray-700 text-gray-900 :text-white placeholder-gray-400 :placeholder-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                  />
-                  <input
-                    type="password"
-                    placeholder="Konfirmasi Password"
-                    class="w-full px-4 py-3 border border-gray-300 :border-gray-600 rounded-lg bg-gray-50 :bg-gray-700 text-gray-900 :text-white placeholder-gray-400 :placeholder-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                  />
-                </div>
-              </div>
-
-              <!-- Captcha -->
-              <input
-                type="text"
-                placeholder="Please Insert Captcha"
-                class="w-full px-4 py-3 border border-gray-300 :border-gray-600 rounded-lg bg-gray-50 :bg-gray-700 text-gray-900 :text-white placeholder-gray-400 :placeholder-gray-300 focus:ring-blue-500 focus:border-blue-500"
-              />
-
-              <!-- Agreement -->
-              <div class="flex items-start">
-                <input
-                  type="checkbox"
-                  class="h-4 w-4 mt-1 text-blue-600 border-gray-300 :border-gray-600 rounded focus:ring-blue-500"
-                />
-                <label class="ml-2 text-sm text-gray-700 :text-gray-300">
-                  Saya Setuju Dengan
-                  <a
-                    href="#"
-                    class="text-blue-600 hover:text-blue-700 :text-blue-400 :hover:text-blue-500 font-medium"
-                    >Ketentuan Penggunaan</a
-                  >
-                  dan
-                  <a
-                    href="#"
-                    class="text-blue-600 hover:text-blue-700 :text-blue-400 :hover:text-blue-500 font-medium"
-                    >Kebijakan Privasi</a
-                  >
-                </label>
-              </div>
-
-              <!-- Submit -->
-              <button
-                type="submit"
-                class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 shadow-md"
-              >
-                Daftar
-              </button>
-
-              <!-- Already Have Account -->
-              <div class="text-center text-gray-600 :text-gray-400">
-                Sudah Memiliki Akun?
-                <a
-                  href="login.html"
-                  class="text-blue-600 hover:text-blue-700 :text-blue-400 :hover:text-blue-500 font-semibold"
-                >
-                  Masuk
-                </a>
-              </div>
             </div>
           </form>
+          <div class="pt-4 text-center">
+            <button
+              type="submit"
+              class="md:w-[50%] w-full bg-blue-600 text-white py-3 mb-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 shadow-md"
+            >
+              Daftar
+            </button>
+
+            <!-- Already Have Account -->
+            <div class="text-center text-gray-600">
+              Sudah Memiliki Akun?
+              <a
+                href="login.html"
+                class="text-blue-600 hover:text-blue-700 font-semibold"
+                >Masuk</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
